@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px 8%;
+  border: 1px solid #c99a52;
+}
+
+.brand,
+.back-link {
+  color: white;
+  text-decoration: none;
+}
+
+.back-link {
+  font-size: 32px;
+}
+
+main {
+  min-height: 90vh;
+
+  background-color: black;
+}
+
+.reserve h1 {
+  margin: 0 15%;
+  padding-top: 70px;
+}
+
+.reservation-card {
+  background-color: rgb(41, 40, 40);
+
+  margin: 5px 15%;
+  min-height: 70vh;
+
+  border-top: 1px solid orange;
+
+  padding: 25px;
+}
+
+.reservation-card p {
+  margin-bottom: 30px;
+  font-size: 25px;
+}

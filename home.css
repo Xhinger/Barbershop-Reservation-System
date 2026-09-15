@@ -986,6 +986,8 @@ a {
   color: white;
   margin: 0 0 25px;
   font-size: 18px;
+
+  font-family: "Arial Narrow", Arial, sans-serif;
 }
 
 .message form {

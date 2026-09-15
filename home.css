@@ -8,6 +8,32 @@ html {
   scroll-behavior: smooth;
 }
 
+.logo{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  transition: 0.3s;
+  height: 50px;
+}
+
+.logo::after{
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.logo:hover{
+  width: 100%;
+  transform: scale(1.1);
+}
+
 .services {
   margin: 0;
 
@@ -28,7 +54,7 @@ header {
 
   width: 100%;
 
-  padding: 16px;
+  padding: 13px;
   position: fixed;
   top: 0;
 
@@ -60,6 +86,10 @@ header {
   margin-right: 100px;
 }
 
+.links{
+  margin-top: 15px;
+}
+
 .navlink {
   display: flex;
   justify-content: space-between;
@@ -78,7 +108,7 @@ header {
   line-height: 1.6;
 }
 
-.navlink a::after {
+.links a::after {
   content: "";
   position: absolute;
 
@@ -90,11 +120,11 @@ header {
   transition: width 0.3s ease;
 }
 
-.navlink a:hover::after {
+.links a:hover::after {
   width: 100%;
 }
 
-.navlink a:hover {
+.links a:hover {
   transform: scale(1.2);
 }
 
@@ -104,6 +134,32 @@ header {
 
   gap: 20px;
 }
+
+.head1{
+  position: relative;
+  margin-top: 10px;
+}
+
+.head1::after{
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 13px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.head1:hover::after{
+  width: 100%;
+}
+
+.head1:hover{
+  transform: scale(1.2);
+}
+
 
 .links li {
   list-style: none;
@@ -1097,4 +1153,45 @@ footer h3 {
     opacity: 1;
     scale: 1;
   }
+}
+
+.faq{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  min-height: 100dvh;
+  background-color: black;
+
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+}
+
+.faq h1{
+  font-size: 40px;
+  color: white;
+
+  margin-bottom: 200px;
+}
+
+
+details{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  border-bottom: 1px solid orange;
+}
+
+details summary{
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  list-style: none;
+
+  margin-bottom: 10px;
+}
+
+details p{
+  color: white;
+  margin-bottom: 15px
 }

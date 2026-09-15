@@ -1156,22 +1156,28 @@ footer h3 {
 }
 
 .faq{
+  background-color: black;
+}
+
+.faq-container{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 
   min-height: 100dvh;
-  background-color: black;
 
   border-top: 1px solid orange;
   border-bottom: 1px solid orange;
+
+  border-radius: 20px;
 }
 
 .faq h1{
   font-size: 40px;
   color: white;
 
-  margin-bottom: 200px;
+  
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 
@@ -1179,7 +1185,7 @@ details{
   margin-top: 20px;
   margin-bottom: 20px;
 
-  border-bottom: 1px solid orange;
+
 }
 
 details summary{
@@ -1189,9 +1195,13 @@ details summary{
   list-style: none;
 
   margin-bottom: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 details p{
-  color: white;
-  margin-bottom: 15px
+  color: darkgrey;
+  margin-bottom: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
+

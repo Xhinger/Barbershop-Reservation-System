@@ -11,12 +11,16 @@ body {
   min-height: 100vh;
 }
 
+.span-1 {
+  color: #c99a52;
+}
+
 .book-header {
   display: flex;
   justify-content: space-between;
 
   padding: 20px 8%;
-  border: 1px solid #c99a52;
+  border-bottom: 1px solid #c99a52;
 }
 
 .book-header a,
@@ -50,6 +54,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  font-family: Arial, sans-serif;
 
   position: relative;
 }

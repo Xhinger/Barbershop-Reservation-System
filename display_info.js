@@ -4,7 +4,7 @@ const reservation = JSON.parse(
 
 if (reservation) {
 
-    document.getElementById("display-name").textContent =
+    document.getElementById("display-name").textContent = 
         reservation.name;
 
     document.getElementById("display-contact").textContent =

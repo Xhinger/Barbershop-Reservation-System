@@ -539,10 +539,16 @@ a {
   padding: 100px;
   width: 100%;
 
-  border-top: 1px solid orange;
-  border-bottom: 1px solid orange;
+  border-top: 1px solid #9a7045;
+  border-bottom: 1px solid #9a7045;
   border-left: none;
   border-right: none;
+
+  background: radial-gradient(
+    circle at 50% 0,
+    rgba(255, 196, 0, 0.132),
+    transparent 40%
+  );
 }
 
 .description h1 {
@@ -987,7 +993,7 @@ a {
   margin: 0 0 25px;
   font-size: 18px;
 
-  font-family: "Arial Narrow", Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .message form {
@@ -1167,8 +1173,14 @@ footer h3 {
 
   min-height: 100dvh;
 
-  border-top: 1px solid orange;
-  border-bottom: 1px solid orange;
+  border-top: 1px solid #9a7045;
+  border-bottom: 1px solid #9a7045;
+
+  background: radial-gradient(
+    circle at 50% 350px,
+    rgba(225, 175, 101, 0.189),
+    transparent 34rem
+  );
 
   border-radius: 20px;
 }
@@ -1187,7 +1199,7 @@ details {
   margin-top: 20px;
   margin-bottom: 20px;
 
-  border-bottom: 1px solid orange;
+  border-bottom: 1px solid #9a7045;
 
   width: 150%;
 }
@@ -1235,6 +1247,20 @@ details p {
   color: white;
 }
 
+.about-page {
+  background:
+    radial-gradient(
+      circle at 0% 400px,
+      rgba(243, 118, 1, 0.224),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 100% 400px,
+      rgba(243, 118, 1, 0.224),
+      transparent 40%
+    );
+}
+
 .staff-intro {
   text-align: center;
   padding-top: 100px;
@@ -1261,18 +1287,19 @@ details p {
 }
 
 .barber-1 {
-  background-color: black;
-
-  border-radius: 30px;
-
-  width: 340px;
-  height: 500px;
-  overflow: hidden;
+  width: 350px;
+  min-height: 450px;
 
   display: flex;
   flex-direction: column;
 
-  transition: 0.4s;
+  background-color: #111;
+  color: white;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  transition: 0.3s ease;
 }
 
 .barber-1:hover {
@@ -1282,18 +1309,18 @@ details p {
 }
 
 .barber-2 {
-  background-color: black;
-
-  border-radius: 30px;
-
-  width: 340px;
-  height: 500px;
-  overflow: hidden;
+  width: 320px;
+  min-height: 450px;
 
   display: flex;
   flex-direction: column;
 
-  transition: 0.3s;
+  background-color: #111;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  transition: 0.3s ease;
 }
 
 .barber-2:hover {
@@ -1303,18 +1330,18 @@ details p {
 }
 
 .barber-3 {
-  background-color: black;
-
-  border-radius: 30px;
-
-  width: 340px;
-  height: 500px;
-  overflow: hidden;
+  width: 320px;
+  min-height: 450px;
 
   display: flex;
   flex-direction: column;
 
-  transition: 0.3s;
+  background-color: #111;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+
+  transition: 0.3s ease;
 }
 
 .barber-3:hover {
@@ -1328,33 +1355,28 @@ details p {
   height: 100%;
 
   object-fit: cover;
-  display: block;
 }
 
 .barber-pic {
-  height: 60%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 230px;
 }
 
 .barber-info {
-  background-color: black;
+  flex: 1;
+  padding: 24px;
 
-  height: 40%;
-  padding: 25px;
-
-  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .barber-info h3 {
+  margin: 0 0 8px;
   font-size: xx-large;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .position {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 
@@ -1387,21 +1409,53 @@ details p {
 }
 
 .btn::after {
-  position: absolute;
   content: "";
+  position: absolute;
 
-  left: 227px;
-  bottom: 20px;
+  left: 205px;
   width: 0;
+  bottom: 20px;
   height: 2px;
   background-color: orange;
   transition: width 0.3s ease;
 }
 
 .btn:hover::after {
-  width: 24%;
+  width: 27%;
 }
 
 .btn:hover {
-  transform: scale(1.07);
+  transform: translateY(-8px);
+}
+
+.btn-1 {
+  display: flex;
+  justify-content: flex-end;
+
+  padding-right: 30px;
+  padding-bottom: 26px;
+  text-decoration: none;
+  font-size: 18px;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+
+  position: relative;
+  transition: 0.3s;
+}
+
+.btn-1::after {
+  content: "";
+  position: absolute;
+
+  left: 233px;
+  width: 0;
+  bottom: 20px;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.3s ease;
+}
+
+.btn-1:hover::after {
+  width: 25%;
 }

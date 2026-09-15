@@ -9,45 +9,59 @@
 <body>
 
     <header class="book-header">
-        <h1 class="brand">BARBERSHOP</h1>
+        <a href="home.html" class="head">
+                <img class="logo" src="logo.jpg" alt="logo">
+            </a>
+            
         <a href="home.html" class="back-link">Home</a>
     </header>
 
     <main class="reserve">
+        <p class="page-kicker">Appointment confirmation</p>
         <h1>Reservation Details</h1>
 
         <div class="reservation-card">
+            <div class="receipt-head">
+                <p class="receipt-brand">SAÑADOS</p>
+                <p class="receipt-subtitle">BARBERSHOP</p>
+                <p class="receipt-title">RESERVATION RECEIPT</p>
+            </div>
 
-            <p>
-                <strong>Full Name: </strong>
+            <div class="receipt-divider"></div>
+
+            <div class="receipt-row">
+                <strong>FULL NAME</strong>
                 <span id="display-name"></span>
-            </p>
+            </div>
 
-            <p>
-                <strong>Contact:</strong>
+            <div class="receipt-row">
+                <strong>CONTACT</strong>
                 <span id="display-contact"></span>
-            </p>
+            </div>
 
-            <p>
-                <strong>Service:</strong>
+            <div class="receipt-row">
+                <strong>SERVICE</strong>
                 <span id="display-service"></span>
-            </p>
+            </div>
 
-            <p>
-                <strong>Date:</strong>
+            <div class="receipt-row">
+                <strong>DATE</strong>
                 <span id="display-date"></span>
-            </p>
+            </div>
 
-            <p>
-                <strong>Time:</strong>
+            <div class="receipt-row">
+                <strong>TIME</strong>
                 <span id="display-time"></span>
-            </p>
+            </div>
 
-            <p>
-                <strong>Additional Message:</strong>
+            <div class="receipt-row receipt-row-message">
+                <strong>ADDITIONAL MESSAGE</strong>
                 <span id="display-message"></span>
-            </p>
-            
+            </div>
+
+            <div class="receipt-divider"></div>
+            <p class="receipt-thanks">Thank you for choosing us.</p>
+            <p class="receipt-note">Please arrive 10 minutes before your appointment.</p>
         </div>
     </main>
 

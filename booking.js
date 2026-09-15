@@ -1,12 +1,61 @@
 
+const serviceCatalog = {
+    "Classic Haircut": { barber: "James", price: 100 },
+    Fade: { barber: "James", price: 100 },
+    "Low Fade": { barber: "James", price: 110 },
+    "Mid Fade": { barber: "James", price: 110 },
+    "High Fade": { barber: "James", price: 100 },
+    "Burst Fade": { barber: "James", price: 100 },
+    Mullet: { barber: "James", price: 120 },
+    "Semi-Kalbo": { barber: "James", price: 100 }
+};
+
 const form = document.getElementById("booking-form");
+const serviceSelect = document.getElementById("service");
+const summaryMessage = document.getElementById("summary-message");
+const summaryDetails = document.getElementById("summary-details");
+
+function updateReservationSummary() {
+    const selectedService = serviceSelect.value;
+    const details = serviceCatalog[selectedService];
+
+    if (!selectedService || !details) {
+        summaryMessage.hidden = false;
+        summaryDetails.hidden = true;
+        return null;
+    }
+
+    document.getElementById("summary-service").textContent = selectedService;
+    document.getElementById("summary-barber").textContent = details.barber;
+    document.getElementById("summary-price").textContent = `₱${details.price}`;
+    summaryMessage.hidden = true;
+    summaryDetails.hidden = false;
+
+    return details;
+}
+
+const requestedService = new URLSearchParams(window.location.search).get("service");
+if (requestedService && serviceCatalog[requestedService]) {
+    serviceSelect.value = requestedService;
+}
+
+serviceSelect.addEventListener("change", updateReservationSummary);
+updateReservationSummary();
 
 form.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
+    const serviceDetails = updateReservationSummary();
+    if (!serviceDetails) {
+        serviceSelect.focus();
+        return;
+    }
+
     const reservation = {
-        service: document.getElementById("service").value,
+        service: serviceSelect.value,
+        barber: serviceDetails.barber,
+        price: serviceDetails.price,
         date: document.getElementById("date").value,
         time: document.getElementById("time").value,
         name: document.getElementById("name").value,

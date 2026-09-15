@@ -30,6 +30,25 @@
         <section class="book-info">
             <h2>Appointment Details</h2>
 
+            <aside class="reservation-summary" aria-live="polite">
+                <h3>Reservation Information</h3>
+                <p class="summary-message" id="summary-message">Please select a service to continue.</p>
+                <dl class="summary-details" id="summary-details" hidden>
+                    <div>
+                        <dt>Service</dt>
+                        <dd id="summary-service"></dd>
+                    </div>
+                    <div>
+                        <dt>Barber Staff</dt>
+                        <dd id="summary-barber"></dd>
+                    </div>
+                    <div>
+                        <dt>Price</dt>
+                        <dd id="summary-price"></dd>
+                    </div>
+                </dl>
+            </aside>
+
             <form class="book-form" id="booking-form">
                 <div class="input">
                     <label for="service">Choose a service</label>
@@ -63,8 +82,8 @@
                 </div>
 
                 <div class="input">
-                    <label for="contact">Number or Email</label>
-                    <input id="contact" type="text" name="contact" placeholder="Enter your phone or email" required> 
+                    <label for="contact">Email</label>
+                    <input id="contact" type="email" name="contact" placeholder="Enter your email" required> 
                 </div>
 
                 <div class="input">
@@ -72,7 +91,7 @@
                     <textarea name="message" id="message" placeholder="Enter addtional details"></textarea>
                 </div>
 
-                <button type="submit" id="confirmBtn" onclick="success()">CONFIRM APPOINTMENT</button>
+                <button type="submit" id="confirmBtn">CONFIRM APPOINTMENT</button>
             </form>
 
         </section>

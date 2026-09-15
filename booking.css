@@ -24,38 +24,13 @@ body {
   position: relative;
 }
 
-.book-header h1::after {
-  position: absolute;
-  content: "";
-
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-
-  background-color: #c99a52;
-  transition: width 0.3s ease;
+.logo {
+  height: 50px;
+  transition: 0.3s;
 }
 
-.book-header h1:hover::after {
-  width: 100%;
-}
-
-.book-header a::after {
-  content: "";
-  position: absolute;
-
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-
-  background-color: #c99a52;
-  transition: width 0.3s ease;
-}
-
-.book-header a:hover::after {
-  width: 100%;
+.logo:hover {
+  transform: scale(1.09);
 }
 
 .sana {
@@ -69,6 +44,30 @@ body {
 
   display: inline-block;
   transition: 0.3s;
+}
+
+.back-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.back-link::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 7px;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.3s ease;
+}
+
+.back-link:hover::after {
+  width: 100%;
 }
 
 .brand:hover {

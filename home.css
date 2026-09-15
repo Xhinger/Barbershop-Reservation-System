@@ -578,11 +578,6 @@ a {
   border-radius: 25px;
 }
 
-.barber-section {
-  min-height: 100vh;
-  background-color: orange;
-}
-
 .gallery-container {
   background-color: black;
   padding: 10px 8%;
@@ -605,6 +600,10 @@ a {
 
 .our {
   color: white;
+
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .gallery {
@@ -1027,6 +1026,11 @@ a {
   resize: vertical;
 }
 
+.message input:focus,
+.message textarea:focus {
+  border: 1px solid orange;
+}
+
 .message button {
   background-color: black;
   border: none;
@@ -1220,4 +1224,182 @@ details p {
   animation-range: entry 0% cover 15%;
 
   margin-right: 176px;
+}
+
+.barber-section {
+  min-height: 100dvh;
+  background-color: black;
+
+  color: white;
+}
+
+.staff-intro {
+  text-align: center;
+  padding-top: 100px;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.barber-card {
+  padding: 30px;
+  min-height: 70dvh;
+
+  display: flex;
+  justify-content: space-around;
+
+  gap: 40px;
+
+  animation: bottomToTop linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.barber-1 {
+  background-color: black;
+
+  border-radius: 30px;
+
+  width: 340px;
+  height: 500px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.4s;
+}
+
+.barber-1:hover {
+  border: 1px solid orange;
+  box-shadow: 0 20px 80px orange;
+  transform: scale(1.04);
+}
+
+.barber-2 {
+  background-color: black;
+
+  border-radius: 30px;
+
+  width: 340px;
+  height: 500px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.3s;
+}
+
+.barber-2:hover {
+  border: 1px solid orange;
+  box-shadow: 0 20px 80px orange;
+  transform: scale(1.04);
+}
+
+.barber-3 {
+  background-color: black;
+
+  border-radius: 30px;
+
+  width: 340px;
+  height: 500px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  transition: 0.3s;
+}
+
+.barber-3:hover {
+  border: 1px solid orange;
+  box-shadow: 0 20px 80px orange;
+  transform: scale(1.04);
+}
+
+.barber-pic img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+
+.barber-pic {
+  height: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.barber-info {
+  background-color: black;
+
+  height: 40%;
+  padding: 25px;
+
+  color: white;
+}
+
+.barber-info h3 {
+  font-size: xx-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.position {
+  margin-bottom: 20px;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  color: lightgrey;
+  margin-top: 10px;
+}
+
+.details {
+  font-weight: 600;
+
+  color: lightgrey;
+  margin-top: 10px;
+  font-size: 19px;
+}
+
+.btn {
+  display: flex;
+  justify-content: flex-end;
+
+  padding-right: 30px;
+  padding-bottom: 26px;
+  text-decoration: none;
+  font-size: 18px;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+
+  position: relative;
+  transition: 0.3s;
+}
+
+.btn::after {
+  position: absolute;
+  content: "";
+
+  left: 227px;
+  bottom: 20px;
+  width: 0;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.3s ease;
+}
+
+.btn:hover::after {
+  width: 24%;
+}
+
+.btn:hover {
+  transform: scale(1.07);
 }

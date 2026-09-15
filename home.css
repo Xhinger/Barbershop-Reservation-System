@@ -1180,6 +1180,10 @@ footer h3 {
 details {
   margin-top: 20px;
   margin-bottom: 20px;
+
+  border-bottom: 1px solid orange;
+
+  width: 150%;
 }
 
 details summary {
@@ -1214,4 +1218,6 @@ details p {
   animation: slideInLeft linear;
   animation-timeline: view();
   animation-range: entry 0% cover 15%;
+
+  margin-right: 176px;
 }

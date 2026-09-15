@@ -1,13 +1,13 @@
 
 const serviceCatalog = {
-    "Classic Haircut": { barber: "James", price: 100 },
-    Fade: { barber: "James", price: 100 },
-    "Low Fade": { barber: "James", price: 110 },
-    "Mid Fade": { barber: "James", price: 110 },
-    "High Fade": { barber: "James", price: 100 },
-    "Burst Fade": { barber: "James", price: 100 },
-    Mullet: { barber: "James", price: 120 },
-    "Semi-Kalbo": { barber: "James", price: 100 }
+    "Classic Haircut": { barber: "James", price: 150 },
+    Fade: { barber: "James", price: 150 },
+    "Low Fade": { barber: "James", price: 150 },
+    "Mid Fade": { barber: "James", price: 150 },
+    "High Fade": { barber: "James", price: 150 },
+    "Burst Fade": { barber: "James", price: 150 },
+    Mullet: { barber: "James", price: 150 },
+    "Semi-Kalbo": { barber: "James", price: 150 }
 };
 
 const form = document.getElementById("booking-form");

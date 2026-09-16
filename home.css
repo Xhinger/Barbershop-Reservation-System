@@ -35,7 +35,7 @@ html {
 
   background-image:
     linear-gradient(rgba(50, 50, 50, 0.2), rgba(0, 0, 0, 0.8)),
-    url("barbers.jpg");
+    url("Barberstore.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -180,9 +180,10 @@ header {
   text-align: center;
   font-size: 90px;
 
-  margin-top: 130px;
+  margin-top: 240px;
 
   font-family: Georgia, serif;
+  font-weight: 500;
 
   color: white;
 }
@@ -1208,7 +1209,7 @@ footer h3 {
   border-bottom: 1px solid #9a7045;
 
   background: radial-gradient(
-    circle at 50% 350px,
+    circle 500px at 50% 50%,
     rgba(225, 175, 101, 0.189),
     transparent 34rem
   );
@@ -1331,12 +1332,11 @@ details p {
 
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   background-color: #111;
   color: white;
-
   border-radius: 20px;
-  overflow: hidden;
 
   transition: 0.3s ease;
 }
@@ -1353,12 +1353,12 @@ details p {
 
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   background-color: #111;
   color: white;
-  border-radius: 20px;
-  overflow: hidden;
 
+  border-radius: 20px;
   transition: 0.3s ease;
 }
 
@@ -1374,11 +1374,11 @@ details p {
 
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   background-color: #111;
   color: white;
   border-radius: 20px;
-  overflow: hidden;
 
   transition: 0.3s ease;
 }
@@ -1398,14 +1398,13 @@ details p {
 
 .barber-pic {
   height: 230px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .barber-info {
   flex: 1;
   padding: 24px;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .barber-info h3 {
@@ -1472,7 +1471,7 @@ summary {
   content: "";
   position: absolute;
 
-  left: 234px;
+  left: 227px;
   width: 0;
   bottom: 20px;
   height: 2px;
@@ -1509,7 +1508,7 @@ summary {
   content: "";
   position: absolute;
 
-  left: 234px;
+  left: 228px;
   width: 0;
   bottom: 20px;
   height: 2px;

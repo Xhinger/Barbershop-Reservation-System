@@ -7,7 +7,10 @@
 body {
   background-color: #080808;
   color: white;
-  font-family: Arial, sans-serif;
+
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+
   min-height: 100vh;
 }
 
@@ -55,7 +58,8 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-family: Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 
   position: relative;
 }

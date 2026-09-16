@@ -99,9 +99,8 @@ header {
   text-decoration: none;
   color: white;
 
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  line-height: 1.6;
+  font-family: Georgia, serif;
+  font-weight: bold;
 }
 
 .links a::after {
@@ -179,9 +178,11 @@ header {
 
 .intro h1 {
   text-align: center;
-  font-size: 100px;
+  font-size: 90px;
 
   margin-top: 130px;
+
+  font-family: Georgia, serif;
 
   color: white;
 }
@@ -258,7 +259,9 @@ header {
 .service-h2 {
   font-size: 35px;
   font-weight: 800;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  font-family: Georgia, serif;
+  font-weight: bold;
 
   color: white;
   margin: 10px 40px;
@@ -268,6 +271,9 @@ header {
   font-size: 18px;
   margin-right: 40px;
   margin-top: 28px;
+
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 .haircut-1 {
@@ -428,14 +434,17 @@ section {
 .service h3 {
   color: white;
   font-size: 25px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  font-family: Georgia, serif;
+  font-weight: bold;
 }
 
 .service p {
   color: lightgrey;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
-  font-size: 18px;
+  font-family: Georgia, serif;
+
+  font-size: 17px;
 }
 
 .service a {
@@ -510,13 +519,16 @@ a {
   margin-top: 70px;
 
   text-align: center;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 
   color: white;
 }
 
 .about-them h2 {
   font-size: 45px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 .about-them p {
@@ -552,28 +564,33 @@ a {
 }
 
 .description h1 {
-  font-size: 80px;
+  font-size: 75px;
   text-align: center;
-  color: white;
+  color: whitesmoke;
 
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  font-weight: bold;
 }
 
 .paragraph-1 {
-  color: white;
+  color: lightgray;
   margin-top: 30px;
   font-size: 21px;
 
-  font-family: Montserrat, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+
   text-align: center;
 }
 
 .paragraph-2 {
   margin-top: 30px;
   font-size: 21px;
-  color: white;
+  color: lightgray;
 
-  font-family: Montserrat, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+
   text-align: center;
 }
 
@@ -600,8 +617,11 @@ a {
   margin-bottom: 60px;
 }
 
-.text {
+.text h1 {
   margin-top: 60px;
+
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 .our {
@@ -632,7 +652,8 @@ a {
   background-color: #9a7045;
   padding: 20px;
 
-  font-family: Montserrat, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 
   margin: 20px;
 
@@ -963,12 +984,16 @@ a {
   margin: 5px 0 8px;
   color: white;
 
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 .contact-item p {
   font-size: 19px;
   line-height: 1.5;
+
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 
   color: white;
 }
@@ -983,7 +1008,9 @@ a {
 
   color: white;
   font-size: 35px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 .message p {
@@ -993,7 +1020,8 @@ a {
   margin: 0 0 25px;
   font-size: 18px;
 
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 .message form {
@@ -1005,6 +1033,9 @@ a {
 
 ::placeholder {
   color: white;
+
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 .message input,
@@ -1187,9 +1218,13 @@ footer h3 {
 
 .faq h1 {
   font-size: 40px;
-  color: white;
+  background: linear-gradient(120deg, orange, rgba(255, 102, 0, 0.11));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+
   animation: slideInRight linear;
   animation-timeline: view();
   animation-range: entry 0% cover 15%;
@@ -1206,18 +1241,21 @@ details {
 
 details summary {
   font-size: 25px;
-  color: white;
+  color: lightgray;
   cursor: pointer;
   list-style: none;
 
   margin-bottom: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 details p {
   color: darkgrey;
   margin-bottom: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 }
 
 @keyframes slideInLeft {
@@ -1244,19 +1282,19 @@ details p {
   min-height: 100dvh;
   background-color: black;
 
-  color: white;
+  color: lightgray;
 }
 
 .about-page {
   background:
     radial-gradient(
       circle at 0% 400px,
-      rgba(243, 118, 1, 0.224),
+      rgba(161, 108, 59, 0.217),
       transparent 40%
     ),
     radial-gradient(
       circle at 100% 400px,
-      rgba(243, 118, 1, 0.224),
+      rgba(161, 108, 59, 0.217),
       transparent 40%
     );
 }
@@ -1265,7 +1303,8 @@ details p {
   text-align: center;
   padding-top: 100px;
 
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
 
   animation: appear linear;
   animation-timeline: view();
@@ -1304,12 +1343,12 @@ details p {
 
 .barber-1:hover {
   border: 1px solid orange;
-  box-shadow: 0 20px 80px orange;
+  box-shadow: 0 0px 70px orange;
   transform: scale(1.04);
 }
 
 .barber-2 {
-  width: 320px;
+  width: 350px;
   min-height: 450px;
 
   display: flex;
@@ -1325,12 +1364,12 @@ details p {
 
 .barber-2:hover {
   border: 1px solid orange;
-  box-shadow: 0 20px 80px orange;
+  box-shadow: 0 0px 70px orange;
   transform: scale(1.04);
 }
 
 .barber-3 {
-  width: 320px;
+  width: 350px;
   min-height: 450px;
 
   display: flex;
@@ -1346,7 +1385,7 @@ details p {
 
 .barber-3:hover {
   border: 1px solid orange;
-  box-shadow: 0 20px 80px orange;
+  box-shadow: 0 0px 70px orange;
   transform: scale(1.04);
 }
 
@@ -1372,7 +1411,16 @@ details p {
 .barber-info h3 {
   margin: 0 0 8px;
   font-size: xx-large;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+}
+
+.barber-info p {
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+
+  font-size: 15px;
 }
 
 .position {
@@ -1392,6 +1440,16 @@ details p {
   font-size: 19px;
 }
 
+details p {
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+}
+
+summary {
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+}
+
 .btn {
   display: flex;
   justify-content: flex-end;
@@ -1401,7 +1459,9 @@ details p {
   text-decoration: none;
   font-size: 18px;
 
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
+
   color: white;
 
   position: relative;
@@ -1412,7 +1472,7 @@ details p {
   content: "";
   position: absolute;
 
-  left: 205px;
+  left: 234px;
   width: 0;
   bottom: 20px;
   height: 2px;
@@ -1421,7 +1481,7 @@ details p {
 }
 
 .btn:hover::after {
-  width: 27%;
+  width: 25%;
 }
 
 .btn:hover {
@@ -1437,7 +1497,8 @@ details p {
   text-decoration: none;
   font-size: 18px;
 
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Georgia, serif;
+  letter-spacing: 0.08ch;
   color: white;
 
   position: relative;
@@ -1448,7 +1509,7 @@ details p {
   content: "";
   position: absolute;
 
-  left: 233px;
+  left: 234px;
   width: 0;
   bottom: 20px;
   height: 2px;

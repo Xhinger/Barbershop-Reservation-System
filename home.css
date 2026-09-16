@@ -21,7 +21,7 @@ html {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: currentColor;
+  background-color: orange;
   transition: width 0.3s ease;
 }
 
@@ -108,10 +108,10 @@ header {
   position: absolute;
 
   left: 0;
-  bottom: 0;
+  bottom: -3px;
   width: 0;
   height: 2px;
-  background-color: currentColor;
+  background-color: orange;
   transition: width 0.3s ease;
 }
 
@@ -120,6 +120,7 @@ header {
 }
 
 .links a:hover {
+  color: #a67c3b;
   transform: scale(1.2);
 }
 
@@ -143,7 +144,7 @@ header {
   bottom: 13px;
   width: 0;
   height: 2px;
-  background-color: currentColor;
+  background-color: orange;
   transition: width 0.3s ease;
 }
 

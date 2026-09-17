@@ -302,7 +302,7 @@ header {
   );
 
   transform: scale(1.04);
-  box-shadow: 0 0 50px #a67c3b;
+  box-shadow: 0 0 50px rgba(160, 107, 58, 0.737);
 }
 
 .haircut-2 {
@@ -326,7 +326,7 @@ header {
   );
 
   transform: scale(1.04);
-  box-shadow: 0 0 50px #a67c3b;
+  box-shadow: 0 0 50px rgba(40, 115, 161, 0.742);
 }
 
 .haircut-3 {
@@ -350,7 +350,7 @@ header {
   );
 
   transform: scale(1.04);
-  box-shadow: 0 0 50px #a67c3b;
+  box-shadow: 0 0 50px rgba(115, 135, 43, 0.792);
 }
 
 .haircut-4 {
@@ -370,7 +370,7 @@ header {
   background: radial-gradient(circle at 0% 0, #3e4a4ab9, transparent 100%);
 
   transform: scale(1.04);
-  box-shadow: 0 0 40px #a67c3b;
+  box-shadow: 0 0 40px #5f7171;
 }
 
 .haircut-5 {
@@ -390,7 +390,7 @@ header {
   background: radial-gradient(circle at 0% 0, #4d3730c0, transparent 100%);
 
   transform: scale(1.04);
-  box-shadow: 0 0 50px #a67c3b;
+  box-shadow: 0 0 50px #78544a;
 }
 
 .haircut-6 {
@@ -410,7 +410,7 @@ header {
   background: radial-gradient(circle at 0% 0, #56371dbd, transparent 100%);
 
   transform: scale(1.04);
-  box-shadow: 0 0 50px #a67c3b;
+  box-shadow: 0 0 50px #6c4524;
 }
 
 .haircut-7 {
@@ -430,7 +430,7 @@ header {
   background: radial-gradient(circle at 0% 0, #413b31, transparent 100%);
 
   transform: scale(1.04);
-  box-shadow: 0 0 50px #a67c3b;
+  box-shadow: 0 0 50px #645b4c;
 }
 
 .haircut-8 {
@@ -449,7 +449,7 @@ header {
   background: radial-gradient(circle at 0% 0, #293b3a, transparent 100%);
 
   transform: scale(1.04);
-  box-shadow: 0 0 50px #a67c3b;
+  box-shadow: 0 0 50px #3d5857;
 }
 
 section {
@@ -587,11 +587,13 @@ a {
   border-left: none;
   border-right: none;
 
-  background: radial-gradient(
-    circle at 50% 0,
-    rgba(255, 196, 0, 0.132),
-    transparent 40%
-  );
+  background:
+    radial-gradient(circle at 50% 0, rgba(255, 196, 0, 0.132), transparent 40%),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(255, 196, 0, 0.132),
+      transparent 40%
+    );
 }
 
 .description h1 {
@@ -1364,7 +1366,7 @@ details p {
   flex-direction: column;
   overflow: hidden;
 
-  background-color: #111;
+  background-color: black;
   color: white;
   border-radius: 20px;
 
@@ -1385,7 +1387,7 @@ details p {
   flex-direction: column;
   overflow: hidden;
 
-  background-color: #111;
+  background-color: black;
   color: white;
 
   border-radius: 20px;
@@ -1406,7 +1408,7 @@ details p {
   flex-direction: column;
   overflow: hidden;
 
-  background-color: #111;
+  background-color: black;
   color: white;
   border-radius: 20px;
 
@@ -1549,4 +1551,8 @@ summary {
 
 .btn-1:hover::after {
   width: 25%;
+}
+
+.btn-1:hover {
+  transform: translateY(-8px);
 }

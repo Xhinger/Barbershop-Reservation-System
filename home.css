@@ -115,7 +115,7 @@ header {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background-color: orange;
+  background-color: #a67c3b;
   transition: width 0.3s ease;
 }
 
@@ -147,7 +147,7 @@ header {
   bottom: 13px;
   width: 0;
   height: 2px;
-  background-color: orange;
+  background-color: #a67c3b;
   transition: width 0.3s ease;
 }
 
@@ -514,7 +514,6 @@ section {
 }
 
 span {
-  font-size: 24px;
   color: #a67c3b;
 }
 
@@ -1012,7 +1011,7 @@ a {
 
 .contact-icon {
   font-size: 32px;
-  color: orange;
+  color: #a67c3b;
 
   margin-bottom: 15px;
 }
@@ -1020,7 +1019,7 @@ a {
 .contact-item h2 {
   font-size: 35px;
   margin: 5px 0 8px;
-  color: white;
+  color: #a67c3b;
 
   font-family: Georgia, serif;
   letter-spacing: 0.08ch;
@@ -1105,7 +1104,7 @@ a {
 
 .message input:focus,
 .message textarea:focus {
-  border: 1px solid orange;
+  border: 1px solid #a67c3b;
 }
 
 .message button {
@@ -1123,7 +1122,8 @@ a {
 }
 
 .message button:hover {
-  background-color: orange;
+  background-color: #a67c3b;
+  color: black;
   cursor: pointer;
 }
 
@@ -1256,10 +1256,7 @@ footer h3 {
 
 .faq h1 {
   font-size: 40px;
-  background: linear-gradient(120deg, orange, rgba(255, 102, 0, 0.11));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
+  color: white;
   font-family: Georgia, serif;
   letter-spacing: 0.08ch;
 
@@ -1513,7 +1510,7 @@ summary {
   width: 0;
   bottom: 20px;
   height: 2px;
-  background-color: orange;
+  background-color: #a67c3b;
   transition: width 0.3s ease;
 }
 
@@ -1523,6 +1520,7 @@ summary {
 
 .btn:hover {
   transform: translateY(-8px);
+  color: #a67c3b;
 }
 
 .btn-1 {
@@ -1550,7 +1548,7 @@ summary {
   width: 0;
   bottom: 20px;
   height: 2px;
-  background-color: orange;
+  background-color: #a67c3b;
   transition: width 0.3s ease;
 }
 
@@ -1560,4 +1558,5 @@ summary {
 
 .btn-1:hover {
   transform: translateY(-8px);
+  color: #a67c3b;
 }

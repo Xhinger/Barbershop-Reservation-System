@@ -281,6 +281,11 @@ header {
   letter-spacing: 0.08ch;
 }
 
+.service-h2,
+.service-p {
+  margin-top: 100px;
+}
+
 .haircut-1 {
   display: flex;
   justify-content: space-between;

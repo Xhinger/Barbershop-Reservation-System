@@ -54,7 +54,19 @@ header {
   position: fixed;
   top: 0;
 
+  animation: fromtop 0.9s ease-in;
+
   z-index: 1000;
+}
+
+@keyframes fromtop {
+  from {
+    transform: translateY(-80px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
 }
 
 .service {
@@ -194,13 +206,13 @@ header {
   color: white;
 }
 
-@keyframes totop{
-  from{
+@keyframes totop {
+  from {
     opacity: 0;
     transform: translateY(100px);
   }
 
-  to{
+  to {
     opacity: 1;
     transform: translateY(5px);
   }
@@ -213,7 +225,7 @@ header {
   color: white;
   font-family: Montserrat, sans-serif;
 
-    animation: totop 1s ease;
+  animation: totop 1s ease;
 }
 
 .view {
@@ -236,7 +248,7 @@ header {
   text-decoration: none;
   color: white;
 
-    animation: totop 1s ease;
+  animation: totop 1s ease;
 }
 
 .intro a::after {

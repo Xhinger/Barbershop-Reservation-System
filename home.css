@@ -189,7 +189,21 @@ header {
   font-family: Georgia, serif;
   font-weight: 500;
 
+  animation: totop 1s ease;
+
   color: white;
+}
+
+@keyframes totop{
+  from{
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateY(5px);
+  }
 }
 
 .intro p {
@@ -198,6 +212,8 @@ header {
 
   color: white;
   font-family: Montserrat, sans-serif;
+
+    animation: totop 1s ease;
 }
 
 .view {
@@ -219,6 +235,8 @@ header {
   font-size: 20px;
   text-decoration: none;
   color: white;
+
+    animation: totop 1s ease;
 }
 
 .intro a::after {

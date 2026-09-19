@@ -202,7 +202,7 @@ header {
   font-family: Georgia, serif;
   font-weight: 500;
 
-  animation: totop 1s ease;
+  animation: totop 1.5s ease;
 
   color: white;
 }
@@ -215,7 +215,7 @@ header {
 
   to {
     opacity: 1;
-    transform: translateY(5px);
+    transform: translateY(0);
   }
 }
 
@@ -226,7 +226,7 @@ header {
   color: white;
   font-family: Montserrat, sans-serif;
 
-  animation: totop 1s ease;
+  animation: totop 1.5s ease;
 }
 
 .view {
@@ -249,7 +249,7 @@ header {
   text-decoration: none;
   color: white;
 
-  animation: totop 1s ease;
+  animation: totop 1.5s ease;
 }
 
 .intro a::after {
@@ -1193,9 +1193,9 @@ footer h3 {
 .haircut-6,
 .haircut-7,
 .haircut-8 {
-  animation: slideInRight 0.3s ease-in;
+  animation: slideInRight 2s ease-in;
   animation-timeline: view();
-  animation-range: entry 0% cover 15%;
+  animation-range: entry 0% cover 30%;
 }
 
 /*----------ANIMATION------------*/

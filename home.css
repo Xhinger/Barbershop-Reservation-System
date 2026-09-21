@@ -54,7 +54,7 @@ header {
   position: fixed;
   top: 0;
 
-  animation: fromtop 0.9s ease-in;
+  animation: fromtop 2s ease;
 
   z-index: 1000;
 }

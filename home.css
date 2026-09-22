@@ -71,6 +71,7 @@ header {
 
 .service {
   background-color: black;
+  padding-bottom: 20px;
 }
 
 .head,
@@ -1553,7 +1554,7 @@ summary {
   content: "";
   position: absolute;
 
-  left: 227px;
+  left: 231px;
   width: 0;
   bottom: 20px;
   height: 2px;
@@ -1591,7 +1592,7 @@ summary {
   content: "";
   position: absolute;
 
-  left: 228px;
+  left: 230px;
   width: 0;
   bottom: 20px;
   height: 2px;
@@ -1668,6 +1669,7 @@ summary {
 @media (max-width: 600px) {
   header {
     padding: 10px;
+    border-radius: 0 0 30px 30px;
   }
 
   .navlink {
@@ -1745,7 +1747,7 @@ summary {
   .gallery {
     min-height: auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: none;
   }
 
@@ -1762,6 +1764,7 @@ summary {
     grid-row: auto;
     min-height: 260px;
     margin: 10px 0;
+    width: 90%;
   }
 
   .about-them {
@@ -1822,5 +1825,29 @@ summary {
 
   footer h3 {
     font-size: 14px;
+  }
+
+  .btn::after {
+    content: "";
+    position: absolute;
+
+    left: 230px;
+    width: 0;
+    bottom: 20px;
+    height: 2px;
+    background-color: #a67c3b;
+    transition: width 0.3s ease;
+  }
+
+  .btn-1::after {
+    content: "";
+    position: absolute;
+
+    left: 230px;
+    width: 0;
+    bottom: 20px;
+    height: 2px;
+    background-color: #a67c3b;
+    transition: width 0.3s ease;
   }
 }

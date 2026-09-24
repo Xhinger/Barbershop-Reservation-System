@@ -1196,7 +1196,7 @@ footer h3 {
 .haircut-8 {
   animation: slideInRight 2s ease-in;
   animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+  animation-range: entry 0% cover 40%;
 }
 
 /*----------ANIMATION------------*/
@@ -1259,7 +1259,7 @@ footer h3 {
 .card-7,
 .card-8,
 .card-9 {
-  animation: bottomToTop linear;
+  animation: bottomToTop linear both;
   animation-timeline: view();
   animation-range: entry 0% cover 38%;
 }
@@ -1267,12 +1267,12 @@ footer h3 {
 @keyframes bottomToTop {
   from {
     opacity: 0;
-    scale: 0.7;
+    transform: translateY(40px) scale(0.5);
   }
 
   to {
     opacity: 1;
-    scale: 1;
+    transform: translateY(0) scale(1);
   }
 }
 

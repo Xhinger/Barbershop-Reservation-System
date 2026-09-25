@@ -35,7 +35,7 @@ html {
 
   background-image:
     linear-gradient(rgba(50, 50, 50, 0.2), rgba(0, 0, 0, 0.8)),
-    url("Barberstore.jpg");
+    url("/Barbershop-Reservation-System/images/Barberstore.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -703,7 +703,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("mullet.jpg");
+    url("/Barbershop-Reservation-System/images/mullet.jpg");
 
   background-size: cover;
   background-position: center;
@@ -734,7 +734,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("classic.jpg");
+    url("/Barbershop-Reservation-System/images/classic.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -763,7 +763,7 @@ a {
   grid-column: 4;
 
   background-image:
-    linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)), url("fade.jpg");
+    linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)), url("/Barbershop-Reservation-System/images/fade.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -792,7 +792,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("midfade.jpg");
+    url("/Barbershop-Reservation-System/images/midfade.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -821,7 +821,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("lowfade.jpg");
+    url("/Barbershop-Reservation-System/images/lowfade.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -850,7 +850,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("highfade.jpg");
+    url("/Barbershop-Reservation-System/images/highfade.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -879,7 +879,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("BURST\ FADE🔥.jpg");
+    url("/Barbershop-Reservation-System/images/BURST\ FADE🔥.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -907,7 +907,7 @@ a {
   grid-column: 3;
 
   background-image:
-    linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)), url("kalbo.jpg");
+    linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)), url("/Barbershop-Reservation-System/images/kalbo.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

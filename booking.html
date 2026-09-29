@@ -33,6 +33,10 @@
             <aside class="reservation-summary" aria-live="polite">
                 <h3>Reservation Information</h3>
 
+                <p id="barber-selection" hidden>
+                    Barber Staff: <span id="selected-barber"></span>
+                </p>
+
                 <p class="summary-message" id="summary-message">Please select a service to continue.</p>
 
                 <dl class="summary-details" id="summary-details" hidden>
@@ -40,11 +44,6 @@
                     <div>
                         <dt>Service</dt>
                         <dd id="summary-service"></dd>
-                    </div>
-
-                    <div>
-                        <dt>Barber Staff</dt>
-                        <dd id="summary-barber"></dd>
                     </div>
 
                     <div>

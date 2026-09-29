@@ -13,6 +13,12 @@ if (reservation) {
     document.getElementById("display-service").textContent =
         reservation.service;
 
+    if (reservation.barber) {
+        document.getElementById("display-barber").textContent =
+            reservation.barber;
+        document.getElementById("display-barber-row").hidden = false;
+    }
+
     document.getElementById("display-date").textContent =
         reservation.date;
 

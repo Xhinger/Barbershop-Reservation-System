@@ -1,19 +1,29 @@
 
 const serviceCatalog = {
-    "Classic Haircut": { barber: "James", price: 150 },
-    Fade: { barber: "James", price: 150 },
-    "Low Fade": { barber: "James", price: 150 },
-    "Mid Fade": { barber: "James", price: 150 },
-    "High Fade": { barber: "James", price: 150 },
-    "Burst Fade": { barber: "James", price: 150 },
-    Mullet: { barber: "James", price: 150 },
-    "Semi-Kalbo": { barber: "James", price: 150 }
+    "Classic Haircut": { price: 150 },
+    Fade: { price: 150 },
+    "Low Fade": { price: 150 },
+    "Mid Fade": { price: 150 },
+    "High Fade": { price: 150 },
+    "Burst Fade": { price: 150 },
+    Mullet: { price: 150 },
+    "Semi-Kalbo": { price: 150 }
 };
 
+const barbers = ["Mia Jose Silva", "Leo Ramos Cruz", "Ian Dizon"];
 const form = document.getElementById("booking-form");
 const serviceSelect = document.getElementById("service");
 const summaryMessage = document.getElementById("summary-message");
 const summaryDetails = document.getElementById("summary-details");
+const barberDisplay = document.getElementById("barber-selection");
+const barberName = document.getElementById("selected-barber");
+const requestedBarber = new URLSearchParams(window.location.search).get("barber");
+const selectedBarber = barbers.includes(requestedBarber) ? requestedBarber : "";
+
+if (selectedBarber) {
+    barberName.textContent = selectedBarber;
+    barberDisplay.hidden = false;
+}
 
 function updateReservationSummary() {
     const selectedService = serviceSelect.value;
@@ -26,7 +36,6 @@ function updateReservationSummary() {
     }
 
     document.getElementById("summary-service").textContent = selectedService;
-    document.getElementById("summary-barber").textContent = details.barber;
     document.getElementById("summary-price").textContent = `₱${details.price}`;
     summaryMessage.hidden = true;
     summaryDetails.hidden = false;
@@ -54,7 +63,7 @@ form.addEventListener("submit", function(event) {
 
     const reservation = {
         service: serviceSelect.value,
-        barber: serviceDetails.barber,
+        barber: selectedBarber,
         price: serviceDetails.price,
         date: document.getElementById("date").value,
         time: document.getElementById("time").value,

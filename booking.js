@@ -1,12 +1,12 @@
 
 const serviceCatalog = {
     "Classic Haircut": { price: 150 },
-    Fade: { price: 150 },
+    "Fade": { price: 150 },
     "Low Fade": { price: 150 },
     "Mid Fade": { price: 150 },
     "High Fade": { price: 150 },
     "Burst Fade": { price: 150 },
-    Mullet: { price: 150 },
+    "Mullet": { price: 150 },
     "Semi-Kalbo": { price: 150 }
 };
 

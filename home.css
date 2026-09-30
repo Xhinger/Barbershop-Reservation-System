@@ -1163,8 +1163,9 @@ a {
 
 footer {
   background-color: #292828;
-  padding: 50px;
+  padding: 20px;
 
+  font-size: 16px;
   color: white;
   display: flex;
   justify-content: center;
@@ -1844,4 +1845,3 @@ summary {
     transition: width 0.3s ease;
   }
 }
-

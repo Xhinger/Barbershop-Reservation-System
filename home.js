@@ -14,3 +14,5 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
         history.pushState(null, "", link.getAttribute("href"));
     });
 });
+
+

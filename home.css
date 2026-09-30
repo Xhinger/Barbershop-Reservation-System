@@ -22,7 +22,7 @@ html {
 
   background-image:
     linear-gradient(rgba(50, 50, 50, 0.2), rgba(0, 0, 0, 0.8)),
-    url("/images/Barberstore.jpg");
+    url("images/Barberstore.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -732,7 +732,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("/images/mullet.jpg");
+    url("images/mullet.jpg");
 
   background-size: cover;
   background-position: center;
@@ -763,7 +763,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("/images/classic.jpg");
+    url("images/classic.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -793,7 +793,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("/images/fade.jpg");
+    url("images/fade.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -822,7 +822,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("/images/midfade.jpg");
+    url("images/midfade.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -851,7 +851,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("/images/lowfade.jpg");
+    url("images/lowfade.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -880,7 +880,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("/images/highfade.jpg");
+    url("images/highfade.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -909,7 +909,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("/images/BURST\ FADE🔥.jpg");
+    url("images/BURST\ FADE🔥.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -938,7 +938,7 @@ a {
 
   background-image:
     linear-gradient(rgba(30, 30, 30, 0.1), rgba(0, 0, 0, 0.6)),
-    url("/images/kalbo.jpg");
+    url("images/kalbo.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

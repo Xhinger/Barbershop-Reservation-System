@@ -22,6 +22,10 @@ const barberName = document.getElementById("selected-barber");
 const requestedBarber = new URLSearchParams(window.location.search).get("barber");
 const selectedBarber = barbers.includes(requestedBarber) ? requestedBarber : "";
 
+const today = new Date();
+today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+dateInput.min = today.toISOString().slice(0, 10);
+
 if (selectedBarber) {
     barberName.textContent = selectedBarber;
     barberDisplay.hidden = false;
@@ -62,6 +66,8 @@ form.addEventListener("submit", function(event) {
         serviceSelect.focus();
         return;
     }
+
+    
 
     const reservation = {
         service: serviceSelect.value,

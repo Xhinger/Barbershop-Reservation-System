@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+<div class="layout">
+
+  <nav class="sidebar">
+    <h1>Barber Shop</h1>
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="staffs.html">Staffs</a>
+    <a href="clients.html">Clients</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="login.html" class="logout">Log out</a>
+  </nav>
+
+  <main class="main">
+    <h2>Dashboard</h2>
+
+    <!-- Earnings -->
+    <div class="stats">
+      <div class="card stat"><p>Earned today</p><strong id="earn-today">₱0</strong></div>
+      <div class="card stat"><p>Earned this week</p><strong id="earn-week">₱0</strong></div>
+      <div class="card stat"><p>Earned this month</p><strong id="earn-month">₱0</strong></div>
+    </div>
+
+    <!-- Appointment requests (rows are filled in by script.js) -->
+    <div class="card">
+      <h3 style="margin-top:0">Appointment requests</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Date &amp; time</th><th>Client</th><th>Service</th><th>Preferred staff</th><th>Price</th><th>Status</th><th></th></tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

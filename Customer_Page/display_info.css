@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #211e19;
+  --muted-ink: #746b5d;
+  --paper: #f5efe2;
+  --paper-dark: #e4dac8;
+  --gold: #c99a52;
+}
+
+.logo {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.09);
+}
+
+body {
+  background: #0d0c0b;
+  color: #f5efe2;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  border-bottom: 1px solid rgba(201, 154, 82, 0.55);
+}
+
+.brand,
+.back-link {
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  transform: scale(1.04);
+}
+
+.brand {
+  font-size: 15px;
+  letter-spacing: 0.25em;
+}
+
+.back-link {
+  font-size: 24px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+
+  transition: 0.3s;
+
+  position: relative;
+}
+
+.back-link::after {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c99a52;
+  transition: width 0.3s ease;
+}
+
+.back-link:hover::after {
+  width: 100%;
+}
+
+.back-link:hover {
+  color: var(--gold);
+  transform: scale(1.09);
+}
+
+main {
+  min-height: calc(100vh - 75px);
+  padding: 72px 20px 90px;
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(201, 154, 82, 0.1),
+      transparent 34rem
+    ),
+    #0d0c0b;
+  text-align: center;
+}
+
+.page-kicker {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.reserve > h1 {
+  margin: 14px 0 35px;
+  font-family: Georgia, serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+.reservation-card {
+  position: relative;
+  width: min(100%, 530px);
+  margin: 0 auto;
+  padding: 38px 42px 34px;
+  color: var(--ink);
+  background: var(--paper);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.42);
+  text-align: left;
+}
+
+/* The repeated circles create the torn-paper edge without an image asset. */
+.reservation-card::before,
+.reservation-card::after {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 9px;
+  content: "";
+  background: radial-gradient(
+      circle at 8px -1px,
+      transparent 8px,
+      var(--paper) 8.5px
+    )
+    0 0 / 16px 9px repeat-x;
+}
+
+.reservation-card::before {
+  top: -8px;
+  transform: rotate(180deg);
+}
+
+.reservation-card::after {
+  bottom: -8px;
+}
+
+.receipt-head {
+  text-align: center;
+}
+
+.receipt-brand {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0.18em;
+}
+
+.receipt-subtitle,
+.receipt-title,
+.receipt-row strong,
+.receipt-note {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.receipt-subtitle {
+  margin-top: 3px;
+  color: var(--muted-ink);
+}
+
+.receipt-title {
+  margin-top: 25px;
+  color: var(--muted-ink);
+}
+
+.receipt-divider {
+  height: 1px;
+  margin: 26px 0 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--muted-ink) 0 5px,
+    transparent 5px 9px
+  );
+  opacity: 0.55;
+}
+
+.receipt-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--paper-dark);
+}
+
+.receipt-row strong {
+  flex: 0 0 42%;
+  color: var(--muted-ink);
+}
+
+.receipt-row span {
+  flex: 1;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  line-height: 1.4;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.receipt-row-message {
+  align-items: flex-start;
+}
+
+.receipt-row-message span {
+  font-size: 15px;
+}
+
+.receipt-thanks {
+  margin-top: 25px;
+  font-family: Georgia, serif;
+  font-size: 17px;
+  text-align: center;
+}
+
+.receipt-note {
+  margin-top: 9px;
+  color: var(--muted-ink);
+  line-height: 1.7;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  header {
+    padding: 19px 6%;
+  }
+
+  .brand {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+  }
+
+  main {
+    padding: 55px 16px 70px;
+  }
+
+  .reservation-card {
+    padding: 32px 24px 28px;
+  }
+
+  .receipt-row {
+    display: block;
+  }
+
+  .receipt-row span {
+    display: block;
+    margin-top: 6px;
+    text-align: left;
+  }
+}

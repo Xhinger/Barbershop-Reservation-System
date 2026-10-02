@@ -991,7 +991,7 @@ a {
 .contact {
   width: 100%;
   min-height: 100dvh;
-  background: black;
+  background-color: #080808;
 
   display: flex;
   justify-content: center;
@@ -1006,7 +1006,7 @@ a {
   max-width: 1250px;
   min-height: 500px;
 
-  background: #1a1a1a;
+  background-color: #1a1a1a;
 
   display: flex;
   align-items: stretch;
@@ -1153,6 +1153,7 @@ a {
   width: 100%;
 
   font-size: 18px;
+  transition: 0.3s;
 }
 
 .message button:hover {

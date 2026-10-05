@@ -10,11 +10,7 @@ router.get("/", async(req,res)=>{
 
 try{
 
-const appointments = await Appointment
-.find()
-.populate("serviceId")
-.populate("barberId");
-
+const appointments = await Appointment.find();
 
 res.json(appointments);
 

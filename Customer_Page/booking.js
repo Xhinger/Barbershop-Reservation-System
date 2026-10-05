@@ -81,7 +81,23 @@ form.addEventListener("submit", function(event) {
     };
 
     // Save reservation
-    localStorage.setItem("reservation", JSON.stringify(reservation));
+   fetch("http://localhost:5000/api/appointments",{
+
+    method:"POST",
+
+    headers:{
+"Content-Type":"application/json"
+    },
+
+    body:JSON.stringify(reservation)
+
+    })
+    .then(res=>res.json())
+    .then(data=>{
+
+    console.log(data);
+
+});
 
     // Go to reservation details page
     window.location.href = "display_info.html";

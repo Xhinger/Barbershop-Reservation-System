@@ -1,32 +1,30 @@
-const mongoose=require("mongoose");
+const mongoose = require("mongoose");
 
 
-const appointmentSchema=new mongoose.Schema({
+const appointmentSchema = new mongoose.Schema({
 
 customerName:String,
 contactNumber:String,
-
-serviceId:{
-type:mongoose.Schema.Types.ObjectId,
-ref:"Service"
-},
-
-barberId:{
-type:mongoose.Schema.Types.ObjectId,
-ref:"Barber"
-},
-
+service:String,
+barber:String,
 date:String,
 time:String,
-status:String,
+message:String,
+
+status:{
+    type:String,
+    default:"Pending"
+},
 
 createdAt:{
-type:Date,
-default:Date.now
+    type:Date,
+    default:Date.now
 }
 
 });
 
 
-module.exports=
-mongoose.model("Appointment",appointmentSchema);
+module.exports = mongoose.model(
+    "Appointment",
+    appointmentSchema
+);

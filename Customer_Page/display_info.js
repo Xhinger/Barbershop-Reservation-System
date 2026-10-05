@@ -2,6 +2,8 @@ const reservation = JSON.parse(
     localStorage.getItem("reservation")
 );
 
+console.log(reservation);
+
 if (reservation) {
 
     document.getElementById("display-name").textContent = 

@@ -1,5 +1,6 @@
 
 const serviceCatalog = {
+
     "Classic Haircut": { price: 150 },
     "Fade": { price: 150 },
     "Low Fade": { price: 150 },
@@ -10,95 +11,201 @@ const serviceCatalog = {
     "Semi-Kalbo": { price: 150 }
 };
 
-const barbers = ["Mia Jose Silva", "Leo Ramos Cruz", "Ian Dizon"];
+
+const barbers = [
+    "Mia Jose Silva",
+    "Leo Ramos Cruz",
+    "Ian Dizon"
+];
+
+
 const form = document.getElementById("booking-form");
 const serviceSelect = document.getElementById("service");
+
 const dateInput = document.getElementById("date");
 const timeInput = document.getElementById("time");
+
 const summaryMessage = document.getElementById("summary-message");
 const summaryDetails = document.getElementById("summary-details");
+
 const barberDisplay = document.getElementById("barber-selection");
 const barberName = document.getElementById("selected-barber");
-const requestedBarber = new URLSearchParams(window.location.search).get("barber");
-const selectedBarber = barbers.includes(requestedBarber) ? requestedBarber : "";
+
+
+// GET BARBER FROM URL
+const requestedBarber = new URLSearchParams(window.location.search)
+.get("barber");
+
+
+const selectedBarber = barbers.includes(requestedBarber)
+    ? requestedBarber
+    : "";
+
 
 const today = new Date();
-today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
-dateInput.min = today.toISOString().slice(0, 10);
 
-if (selectedBarber) {
+today.setMinutes(
+    today.getMinutes() - today.getTimezoneOffset()
+);
+
+dateInput.min = today.toISOString().slice(0,10);
+
+
+
+if(selectedBarber){
+
     barberName.textContent = selectedBarber;
     barberDisplay.hidden = false;
+
 }
 
-function updateReservationSummary() {
+
+
+function updateReservationSummary(){
+
     const selectedService = serviceSelect.value;
+
     const details = serviceCatalog[selectedService];
 
-    if (!selectedService || !details) {
+
+    if(!selectedService || !details){
+
         summaryMessage.hidden = false;
         summaryDetails.hidden = true;
+
         return null;
     }
 
-    document.getElementById("summary-service").textContent = selectedService;
-    document.getElementById("summary-price").textContent = `₱${details.price}`;
+
+    document.getElementById("summary-service")
+    .textContent = selectedService;
+
+
+    document.getElementById("summary-price")
+    .textContent = `₱${details.price}`;
+
+
     summaryMessage.hidden = true;
     summaryDetails.hidden = false;
 
+
     return details;
+
 }
 
-const requestedService = new URLSearchParams(window.location.search).get("service");
-if (requestedService && serviceCatalog[requestedService]) {
+
+
+// LOAD SERVICE FROM URL
+
+const requestedService = new URLSearchParams(window.location.search)
+.get("service");
+
+
+if(requestedService && serviceCatalog[requestedService]){
+
     serviceSelect.value = requestedService;
+
 }
 
-serviceSelect.addEventListener("change", updateReservationSummary);
+
+serviceSelect.addEventListener(
+"change",
+updateReservationSummary
+);
+
+
 updateReservationSummary();
 
-form.addEventListener("submit", function(event) {
+
+
+
+
+// SUBMIT BOOKING
+
+form.addEventListener("submit", function(event){
 
     event.preventDefault();
 
+
     const serviceDetails = updateReservationSummary();
-    if (!serviceDetails) {
+
+
+    if(!serviceDetails){
+
         serviceSelect.focus();
+
         return;
+
     }
 
-    
+
 
     const reservation = {
-        service: serviceSelect.value,
-        barber: selectedBarber,
-        price: serviceDetails.price,
-        date: document.getElementById("date").value,
-        time: document.getElementById("time").value,
-        name: document.getElementById("name").value,
-        contact: document.getElementById("contact").value,
-        message: document.getElementById("message").value
+
+
+        customerName:
+        document.getElementById("name").value,
+
+
+        contactNumber:
+        document.getElementById("contact").value,
+
+
+        service:
+        serviceSelect.value,
+
+
+        barber:
+        selectedBarber,
+
+
+        date:
+        document.getElementById("date").value,
+
+
+        time:
+        document.getElementById("time").value,
+
+
+        message:
+        document.getElementById("message").value,
+        status:"Pending"
     };
 
-    // Save reservation
-   fetch("http://localhost:5000/api/appointments",{
 
-    method:"POST",
 
-    headers:{
-"Content-Type":"application/json"
-    },
+    console.log("Sending:", reservation);
+    // SEND TO MONGODB
 
-    body:JSON.stringify(reservation)
-
+    fetch("http://localhost:5000/api/appointments",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:JSON.stringify(reservation)
     })
     .then(res=>res.json())
-    .then(data=>{
+   .then(data=>{
 
-    console.log(data);
+    console.log("Saved:", data);
 
-});
+    // Save for receipt display
+    localStorage.setItem(
+        "reservation",
+        JSON.stringify(reservation)
+    );
 
-    // Go to reservation details page
-    window.location.href = "display_info.html";
+    alert("Appointment Saved!");
+
+    window.location.href =
+    "display_info.html";
+
+
+})
+
+    .catch(error=>{
+        console.log("Error:",error);
+        
+    });
+
 });

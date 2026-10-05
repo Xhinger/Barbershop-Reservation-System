@@ -991,7 +991,7 @@ a {
 .contact {
   width: 100%;
   min-height: 100dvh;
-  background-color: #080808;
+  background-color: black;
 
   display: flex;
   justify-content: center;
@@ -1029,7 +1029,7 @@ a {
 
   padding: 10px 45px 10px 20px;
 
-  border-right: 3px solid rgb(211, 204, 204);
+  border-right: 3px solid #1a1a1a;
 
   box-sizing: border-box;
 }
@@ -1142,11 +1142,10 @@ a {
 }
 
 .message button {
-  background-color: black;
+  background-color: #c99a52;
+  color: black;
   border: none;
   outline: none;
-
-  color: white;
   margin-top: 20px;
 
   padding: 15px;
@@ -1157,7 +1156,7 @@ a {
 }
 
 .message button:hover {
-  background-color: #a67c3b;
+  background-color: orange;
   color: black;
   cursor: pointer;
 }

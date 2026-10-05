@@ -1202,6 +1202,19 @@ footer h3 {
   margin-bottom: 45px;
 }
 
+.haircut-1,
+.haircut-2,
+.haircut-3,
+.haircut-4,
+.haircut-5,
+.haircut-6,
+.haircut-7,
+.haircut-8 {
+  animation: slideInRight 2s ease-in;
+  animation-timeline: view();
+  animation-range: entry 0% cover 23%;
+}
+
 /*----------ANIMATION------------*/
 @keyframes slideInRight {
   from {

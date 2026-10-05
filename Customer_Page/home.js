@@ -17,7 +17,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
 // GET SERVICES FROM MONGODB
 
-fetch("http://localhost:5000/api/services")
+fetch("https://barbershop-reservation-system.onrender.com/api/services")
 
 .then(response => response.json())
 

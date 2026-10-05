@@ -177,7 +177,7 @@ form.addEventListener("submit", function(event){
     console.log("Sending:", reservation);
     // SEND TO MONGODB
 
-    fetch("http://localhost:5000/api/appointments",{
+    fetch("https://barbershop-reservation-system.onrender.com/api/appointments",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"

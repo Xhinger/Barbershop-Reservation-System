@@ -7,10 +7,10 @@ console.log(reservation);
 if (reservation) {
 
     document.getElementById("display-name").textContent = 
-        reservation.name;
+        reservation.customerName;
 
     document.getElementById("display-contact").textContent =
-        reservation.contact;
+        reservation.contactNumber;
 
     document.getElementById("display-service").textContent =
         reservation.service;

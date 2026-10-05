@@ -1210,9 +1210,6 @@ footer h3 {
 .haircut-6,
 .haircut-7,
 .haircut-8 {
-  animation: slideInRight 2s ease-in;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 
 /*----------ANIMATION------------*/

@@ -1163,18 +1163,44 @@ a {
 }
 
 footer {
-  background-color: #292828;
-  padding: 20px;
+  background-color: #181717;
+  padding-bottom: 45px;
+  padding-top: 90px;
 
   font-size: 16px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  border-top: 2px solid #a67c3b;
+
+  flex-direction: column;
+}
+
+.footer-logo img {
+  height: 80px;
 }
 
 footer h3 {
   text-align: center;
+  font-size: 14px;
+  font-family: Georgia, serif;
+  font-weight: 300;
+
+  color: #a67c3b;
+}
+
+.fb-png {
+  filter: invert(53%) sepia(13%) saturate(1912%) hue-rotate(357deg)
+    brightness(91%) contrast(85%);
+}
+
+.social-logo img {
+  margin-right: 20px;
+  height: 22px;
+  margin-top: 25px;
+  margin-bottom: 45px;
 }
 
 .haircut-1,
@@ -1369,6 +1395,8 @@ details p {
       rgba(161, 108, 59, 0.217),
       transparent 40%
     );
+
+  min-height: 100dvh;
 }
 
 .staff-intro {

@@ -228,6 +228,8 @@ body {
   padding: 15px 25px;
   font-size: 18px;
   cursor: pointer;
+
+  transition: 0.3s;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {

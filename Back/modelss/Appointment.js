@@ -22,8 +22,14 @@ cancelledAt:{
 },
 
 createdAt:{
-    type:Date,
-    default:Date.now
+    type:String,
+    default:()=>{
+
+        return new Date().toLocaleString("en-PH",{
+            timeZone:"Asia/Manila"
+        });
+
+    }
 }
 
 });

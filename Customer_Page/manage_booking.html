@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Booking | Sañados Barbershop</title>
+    <link rel="stylesheet" href="manage_booking.css">
+</head>
+<body>
+    <header class="book-header">
+        <a href="home.html" class="head">
+            <img class="logo" src="images/logo.jpg" alt="logo">
+        </a>
+
+        <a href="home.html" class="back-link">Home</a>
+    </header>
+
+    <main class="manage-page">
+        <p class="page-kicker">Appointment management</p>
+        <h1>Manage Booking</h1>
+
+        <div id="status-message" class="status-message" aria-live="polite"></div>
+
+        <section class="booking-card" id="booking-card">
+            <div class="booking-header">
+                <div>
+                    <p class="booking-label">Current booking</p>
+                    <h2 id="customer-name">Loading...</h2>
+                </div>
+                <span id="booking-status" class="status-badge">Pending</span>
+            </div>
+
+            <div class="booking-meta">
+                <div class="meta-row">
+                    <span class="meta-label">Service</span>
+                    <strong id="service-name">-</strong>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Date</span>
+                    <strong id="booking-date">-</strong>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Time</span>
+                    <strong id="booking-time">-</strong>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Barber</span>
+                    <strong id="barber-name">-</strong>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Contact</span>
+                    <strong id="contact-details">-</strong>
+                </div>
+                <div class="meta-row">
+                    <span class="meta-label">Message</span>
+                    <strong id="booking-message">None</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="action-panel" id="action-panel">
+            <button id="change-time-btn" class="action-btn action-btn-primary" type="button">Change the time</button>
+            <button id="cancel-booking-btn" class="action-btn action-btn-danger" type="button">Cancel appointment</button>
+        </section>
+
+        <div id="cancelled-message" class="cancelled-message hidden" aria-live="polite"></div>
+
+        <section id="change-time-section" class="sub-panel hidden" aria-live="polite">
+            <h3>Update appointment details</h3>
+            <form id="change-time-form">
+                <div class="input-row">
+                    <label for="edit-service">Service</label>
+                    <select id="edit-service" name="service" required>
+                        <option value="">Select an option</option>
+                        <option value="Classic Haircut">Classic Haircut - 150</option>
+                        <option value="Fade">Fade - 150</option>
+                        <option value="Low Fade">Low Fade - 150</option>
+                        <option value="Mid Fade">Mid Fade - 150</option>
+                        <option value="High Fade">High Fade - 150</option>
+                        <option value="Burst Fade">Burst Fade - 150</option>
+                        <option value="Mullet">Mullet - 150</option>
+                        <option value="Semi-Kalbo">Semi-Kalbo - 150</option>
+                    </select>
+                </div>
+
+                <div class="input-row">
+                    <label for="edit-date">Date</label>
+                    <input id="edit-date" name="date" type="date" required>
+                </div>
+
+                <div class="input-row">
+                    <label for="edit-time">Time</label>
+                    <input id="edit-time" name="time" type="time" min="08:00" max="20:00" required>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" id="cancel-edit-btn" class="action-btn action-btn-light">Keep it</button>
+                    <button type="submit" class="action-btn action-btn-primary">Save changes</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="cancel-confirmation" class="sub-panel hidden" aria-live="polite">
+            <h3>Cancel this appointment?</h3>
+            <p>Your slot will be released and the business will be notified.</p>
+            <div class="form-actions">
+                <button type="button" id="keep-booking-btn" class="action-btn action-btn-light">Keep it</button>
+                <button type="button" id="confirm-cancel-btn" class="action-btn action-btn-danger">Cancel appointment</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="manage_booking.js"></script>
+</body>
+</html>

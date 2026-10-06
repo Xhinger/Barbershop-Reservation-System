@@ -244,6 +244,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   background-color: orange;
 }
 
+
 @media (max-width: 1050px) {
   .book-page {
     padding-left: 5%;

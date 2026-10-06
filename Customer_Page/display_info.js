@@ -1,6 +1,11 @@
-const reservation = JSON.parse(
-    localStorage.getItem("reservation")
-);
+const reservationData = localStorage.getItem("reservation");
+let reservation = null;
+
+try {
+    reservation = reservationData ? JSON.parse(reservationData) : null;
+} catch (error) {
+    console.error("Failed to parse reservation from localStorage:", error);
+}
 
 console.log(reservation);
 
@@ -29,5 +34,16 @@ if (reservation) {
 
     document.getElementById("display-message").textContent =
         reservation.message || "None";
+
+    const manageLink = document.getElementById("manage-booking-link");
+    const appointmentId = reservation._id || localStorage.getItem("lastBookingId");
+
+    if (manageLink) {
+        if (appointmentId) {
+            manageLink.href = `manage_booking.html?id=${encodeURIComponent(appointmentId)}`;
+        } else {
+            manageLink.href = "manage_booking.html";
+        }
+    }
 
 }

@@ -237,6 +237,45 @@ main {
   text-align: center;
 }
 
+.display-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-link li {
+  list-style: none;
+}
+
+.button-link {
+  margin-top: 35px;
+}
+
+.button-link a {
+  text-decoration: none;
+  list-style: none;
+
+  margin: 15px 32%;
+
+  border: 0;
+  border-radius: 12px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+
+  color: var(--ink);
+
+  font-size: 17px;
+  text-transform: uppercase;
+
+  background-color: var(--gold);
+  transition: 0.3s;
+  padding: 18px;
+}
+
+.button-link a:hover {
+  background-color: orange;
+}
+
 @media (max-width: 560px) {
   header {
     padding: 19px 6%;

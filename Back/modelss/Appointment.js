@@ -16,6 +16,11 @@ status:{
     default:"Pending"
 },
 
+cancelledAt:{
+    type:Date,
+    default:null
+},
+
 createdAt:{
     type:Date,
     default:Date.now

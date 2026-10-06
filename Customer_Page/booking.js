@@ -189,11 +189,17 @@ form.addEventListener("submit", function(event){
 
     console.log("Saved:", data);
 
+    const savedReservation = {
+        ...reservation,
+        _id: data._id || data.id
+    };
+
     // Save for receipt display
     localStorage.setItem(
         "reservation",
-        JSON.stringify(reservation)
+        JSON.stringify(savedReservation)
     );
+    localStorage.setItem("lastBookingId", savedReservation._id || "");
 
     alert("Appointment Saved!");
 

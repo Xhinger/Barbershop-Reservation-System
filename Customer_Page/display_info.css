@@ -304,3 +304,21 @@ main {
     text-align: left;
   }
 }
+
+@media (max-width: 1286px) {
+  .button-link a {
+    margin: 15px 28%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .button-link a {
+    margin: 15px 22%;
+  }
+}
+
+@media (max-width: 700px) {
+  .button-link a {
+    margin: 15px 2%;
+  }
+}

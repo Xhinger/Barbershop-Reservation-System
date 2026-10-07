@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
-
+const transporter = require("./email");
 const app = express();
 
 
@@ -41,7 +41,20 @@ app.get("/", (req,res)=>{
     res.send("Barbershop API Running");
 });
 
+transporter.verify((error, success)=>{
 
+    if(error){
+
+        console.log("Gmail connection failed:");
+        console.log(error);
+
+    }else{
+
+        console.log("Gmail connected successfully");
+
+    }
+
+});
 // Start Server
 app.listen(process.env.PORT,()=>{
     console.log(`Server running on port ${process.env.PORT}`);

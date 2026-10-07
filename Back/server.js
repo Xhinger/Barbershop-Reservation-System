@@ -17,9 +17,9 @@ app.use((req,res,next)=>{
 });
 
 // Routes
-const serviceRoutes = require("./routess/serviceRoutes");
-const barberRoutes = require("./routess/barberoute");
-const appointmentRoutes = require("./routess/appointmentRoutes");
+const serviceRoutes = require("./Routes/serviceRoutes");
+const barberRoutes = require("./Routes/barberoute");
+const appointmentRoutes = require("./Routes/appointmentRoutes");
 
 app.use("/api/services", serviceRoutes);
 app.use("/api/barbers", barberRoutes);  

@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const transporter = require("../email");
-const Appointment = require("../modelss/Appointment");
+const Appointment = require("../Models/Appointment");
 
 
 // GET APPOINTMENTS

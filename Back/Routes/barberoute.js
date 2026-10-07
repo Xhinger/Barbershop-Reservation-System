@@ -1,17 +1,19 @@
 const express = require("express");
 const router = express.Router();
 
-const Service = require("../modelss/Service");
-console.log("SERVICE ROUTE LOADED");
+const Barber = require("../Models/Barber");
 
-// GET ALL SERVICES
-router.get("/", async (req,res)=>{
+
+// GET ALL BARBERS
+
+router.get("/", async(req,res)=>{
 
     try{
 
-        const services = await Service.find();
+        const barbers = await Barber.find();
 
-        res.json(services);
+        res.json(barbers);
+
 
     }catch(error){
 
@@ -24,16 +26,17 @@ router.get("/", async (req,res)=>{
 });
 
 
-// ADD SERVICE
+// ADD BARBER
+
 router.post("/", async(req,res)=>{
 
     try{
 
-        const service = new Service(req.body);
+        const barber = new Barber(req.body);
 
-        const savedService = await service.save();
+        const saved = await barber.save();
 
-        res.json(savedService);
+        res.json(saved);
 
 
     }catch(error){

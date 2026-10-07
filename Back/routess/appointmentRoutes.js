@@ -51,7 +51,6 @@ try{
 
 const appointment = new Appointment(req.body);
 
-
 const saved = await appointment.save();
 
 

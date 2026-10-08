@@ -1,7 +1,6 @@
 /* ===== Settings ===== */
 // Demo login. Change these. This is NOT real security: anyone can read this file.
-const ADMIN_EMAIL = "admin@barbershop.com";
-const ADMIN_PASSWORD = "admin123";
+
 // Services and their default prices
 const SERVICES = { "Haircut": 250, "Haircut + beard": 400, "Shave": 200, "Hair color": 900 };
 const STORAGE_KEY = "barber-data";
@@ -224,15 +223,57 @@ function start() {
 
 /* ===== Login check (runs last) ===== */
 if (page === "login") {
-  document.getElementById("login-form").onsubmit = e => {
-    e.preventDefault();
-    const ok = document.getElementById("email").value === ADMIN_EMAIL &&
-               document.getElementById("password").value === ADMIN_PASSWORD;
-    if (ok) { sessionStorage.setItem("admin", "yes"); location.href = "dashboard.html"; }
-    else document.getElementById("login-error").textContent = "Wrong email or password.";
-  };
-} else if (sessionStorage.getItem("admin") !== "yes") {
-  location.href = "login.html";
-} else {
-  start();
+
+document.getElementById("login-form").onsubmit = async e => {
+
+e.preventDefault();
+
+const username = document.getElementById("email").value;
+const password = document.getElementById("password").value;
+
+
+try {
+
+const response = await fetch(
+"http://localhost:5000/api/admin/login",
+{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+username,
+password
+})
+}
+);
+
+
+const data = await response.json();
+
+
+if(response.ok){
+
+sessionStorage.setItem("admin","yes");
+
+window.location.href="dashboard.html";
+
+}else{
+
+document.getElementById("login-error").textContent =
+data.message;
+
+}
+
+}
+catch(error){
+
+document.getElementById("login-error").textContent =
+"Cannot connect to server.";
+
+}
+
+};
+
+
 }

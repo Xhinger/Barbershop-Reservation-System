@@ -20,10 +20,12 @@ app.use((req,res,next)=>{
 const serviceRoutes = require("./Routes/serviceRoutes");
 const barberRoutes = require("./Routes/barberoute");
 const appointmentRoutes = require("./Routes/appointmentRoutes");
+const adminRoutes = require("./Routes/adminRoutes");
 
 app.use("/api/services", serviceRoutes);
 app.use("/api/barbers", barberRoutes);  
 app.use("/api/appointments", appointmentRoutes);
+app.use("/api/admin", adminRoutes);
 
 
 // MongoDB Connection

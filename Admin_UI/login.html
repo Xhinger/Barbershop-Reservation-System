@@ -12,31 +12,153 @@
 
   <section class="panel panel-signin">
     <h1>Sign in</h1>
-    <form data-demo>
-      <label>Email <input type="email" required></label>
-      <label>Password<div><input type="password" required></div></label>
-      
-      <button type="submit" class="btn">Sign in</button>
-    </form>
+   
+  <form id="login-form">
+
+   <label for="email">Email
+    <input type="email" id="email" name="email" required>
+    </label>
+
+    <label for="password">Password
+    <div>
+      <input type="password" id="password" name="password" required>
+    </div>
+    </label>
+
+    <button type="submit" class="btn">Sign in</button>
+    <p id="login-error" role="alert"></p>
+
+    <p><a href="#" id="forgot-password-link">Forgot Password?</a></p>
+  </form>
+
 
 
     <p class="switch">No account? <button type="button" data-switch="signup">Sign up</button></p>
   </section>
 
-  <section class="panel panel-signup" inert>
-    <h1>Create account</h1>
-    <form data-demo>
-      <label>Name <input type="text" required></label>
-      <label>Email <input type="email" required></label>
-      <label>Password <input type="password" minlength="8" required></label>
-      <button type="submit" class="btn">Sign up</button>
-    </form>
+  
+<section class="panel panel-signup" inert>
+  <h1>Create account</h1>
+
+  <form id="signup-form">
+
+    <label for="signup-username">Username
+      <input type="text" id="signup-username" required>
+
+    </label>
+
+    <label for="signup-email">Email
+
+      <input type="email" id="signup-email" required>
+
+    </label>
+
+
+    <label for="signup-password">Password
+      <input type="password" id="signup-password"
+             minlength="8" required>
+    </label>
+
+    <button type="submit" class="btn">Sign up</button>
+    <p id="signup-error" role="alert"></p>
+  </form>
+
+  <p class="switch">
+    Have an account?
+    <button type="button" data-switch="signin">Sign in</button>
+  </p>
+</section>
+
+<!-- Forgot Password Panel -->
+<section class="panel panel-forgot" inert>
+
+  <h1>Reset Password</h1>
+
+  <form id="forgot-form">
+
+    <label for="reset-email">
+      Email
+      <input 
+      type="email"
+      id="reset-email"
+      required>
+
+    </label>
+
+
+    <button type="submit" class="btn">
+      Send Code
+    </button>
+
+
+    <p id="forgot-message"></p>
+
+  </form>
+
+
+  <form id="verify-form" style="display:none;">
+
+    <label>
+      Verification Code
+
+      <input 
+      type="text"
+      id="reset-code"
+      maxlength="6"
+      required>
+
+    </label>
+
+
+    <label>
+      New Password
+
+      <input
+      type="password"
+      id="new-password"
+      minlength="8"
+      required>
+
+    </label>
 
 
 
-    
-    <p class="switch">Have an account? <button type="button" data-switch="signin">Sign in</button></p>
-  </section>
+    <label>
+      Confirm Password
+
+      <input
+      type="password"
+      id="confirm-password"
+      minlength="8"
+      required>
+
+    </label>
+
+
+
+    <button type="submit" class="btn">
+      Change Password
+    </button>
+
+
+    <p id="reset-message"></p>
+
+
+  </form>
+
+
+  <p class="switch">
+
+    Remember your password?
+
+    <button type="button" id="back-to-login">
+      Sign in
+    </button>
+
+  </p>
+
+
+</section>
 
   <div class="overlay-wrap">
     <div class="overlay">

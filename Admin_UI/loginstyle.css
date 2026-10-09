@@ -242,3 +242,16 @@ input {
     transition-delay: 0s;
   }
 }
+
+#login-error {
+  color: #ff7777;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+.panel-forgot {
+  display: none;
+  z-index: 6;
+  background-color: #101010;
+}

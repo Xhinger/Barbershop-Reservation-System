@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin login</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Sign in</title>
+  <link rel="stylesheet" href="loginstyle.css">
 </head>
-<body data-page="login">
+<body>
 
-  <div class="login-box card">
-    <h2>Admin login</h2>
-    <form id="login-form">
+<main class="card" id="card">
 
-      <label for="email">Username</label>
-      <input id="email" type="text" required>
-
-      <label for="password">Password</label>
-      <input id="password" type="password" required>
-
-      <p id="login-error" class="error"></p>
-      <button type="submit">Log in</button>
+  <section class="panel panel-signin">
+    <h1>Sign in</h1>
+    <form data-demo>
+      <label>Email <input type="email" required></label>
+      <label>Password<div><input type="password" required></div></label>
+      
+      <button type="submit" class="btn">Sign in</button>
     </form>
+
+
+    <p class="switch">No account? <button type="button" data-switch="signup">Sign up</button></p>
+  </section>
+
+  <section class="panel panel-signup" inert>
+    <h1>Create account</h1>
+    <form data-demo>
+      <label>Name <input type="text" required></label>
+      <label>Email <input type="email" required></label>
+      <label>Password <input type="password" minlength="8" required></label>
+      <button type="submit" class="btn">Sign up</button>
+    </form>
+
+
+
+    
+    <p class="switch">Have an account? <button type="button" data-switch="signin">Sign in</button></p>
+  </section>
+
+  <div class="overlay-wrap">
+    <div class="overlay">
+
+      <div class="overlay-img img-left"></div>
+      <div class="overlay-img img-right"></div>
+
+      <div class="overlay-panel overlay-left" inert>
+        <h2>Already have an account?</h2>
+        <button type="button" class="btn-ghost" data-switch="signin">Sign in</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h2>New here?</h2>
+        <button type="button" class="btn-ghost" data-switch="signup">Sign up</button>
+      </div>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+</main>
+
+<script src="login.js"></script>
 </body>
 </html>

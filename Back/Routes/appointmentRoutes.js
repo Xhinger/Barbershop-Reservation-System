@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 const transporter = require("../email");
 const Appointment = require("../Models/Appointment");
+const verifyAdmin = require("../Middleware/authMiddleware");
 
 
 // GET APPOINTMENTS
 
-router.get("/", async(req,res)=>{
+router.get("/", verifyAdmin, async(req,res)=>{
 
 try{
 
@@ -106,7 +107,7 @@ message:error.message
 
 
 // UPDATE APPOINTMENT
-router.put("/:id", async(req,res)=>{
+router.put("/:id", verifyAdmin, async (req, res) => {
     try {
         const appointment = await Appointment.findByIdAndUpdate(
             req.params.id,
@@ -124,7 +125,7 @@ router.put("/:id", async(req,res)=>{
     }
 });
 
-router.patch("/:id", async(req,res)=>{
+router.patch("/:id", verifyAdmin, async(req,res)=>{
     try {
         const appointment = await Appointment.findByIdAndUpdate(
             req.params.id,
@@ -144,7 +145,7 @@ router.patch("/:id", async(req,res)=>{
 
 
 // DELETE APPOINTMENT
-router.delete("/:id", async(req,res)=>{
+router.delete("/:id", verifyAdmin, async (req, res) => {
     try {
         const appointment = await Appointment.findByIdAndDelete(req.params.id);
 

@@ -222,58 +222,49 @@ function start() {
 }
 
 /* ===== Login check (runs last) ===== */
+
 if (page === "login") {
+    document.getElementById("login-form").onsubmit = async (e) => {
+        e.preventDefault();
 
-document.getElementById("login-form").onsubmit = async e => {
+        const username = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const errorMessage = document.getElementById("login-error");
 
-e.preventDefault();
+        errorMessage.textContent = "";
 
-const username = document.getElementById("email").value;
-const password = document.getElementById("password").value;
+        try {
+            const response = await fetch(
+                "http://localhost:5000/api/admin/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ username, password })
+                }
+            );
 
+            const result = await response.json();
 
-try {
+            if (!response.ok) {
+                errorMessage.textContent = result.message;
+                return;
+            }
 
-const response = await fetch(
-"http://localhost:5000/api/admin/login",
-{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-username,
-password
-})
-}
-);
+            sessionStorage.setItem("adminToken", result.token);
+            sessionStorage.setItem("admin", "yes");
 
+            window.location.href = "dashboard.html";
 
-const data = await response.json();
-
-
-if(response.ok){
-
-sessionStorage.setItem("admin","yes");
-
-window.location.href="dashboard.html";
-
-}else{
-
-document.getElementById("login-error").textContent =
-data.message;
-
-}
-
-}
-catch(error){
-
-document.getElementById("login-error").textContent =
-"Cannot connect to server.";
-
+        } catch (error) {
+            errorMessage.textContent =
+                "Cannot connect to server. Please try again.";
+        }
+    };
+} else if (sessionStorage.getItem("admin") !== "yes") {
+    window.location.href = "login.html";
+} else {
+    start();
 }
 
-};
-
-
-}

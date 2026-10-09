@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const Barber = require("../Models/Barber");
+const verifyAdmin = require("../Middleware/authMiddleware");
 
 
 // GET ALL BARBERS
@@ -28,7 +29,7 @@ router.get("/", async(req,res)=>{
 
 // ADD BARBER
 
-router.post("/", async(req,res)=>{
+router.post("/", verifyAdmin, async (req, res) => {
 
     try{
 

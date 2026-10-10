@@ -7,6 +7,38 @@ const STORAGE_KEY = "barber-data";
 
 const page = document.body.dataset.page;
 
+const API = "http://localhost:5000/api";
+
+
+async function apiFetch(url, options = {}) {
+
+    const token = sessionStorage.getItem("adminToken");
+
+    const response = await fetch(
+        API + url,
+        {
+            ...options,
+            headers:{
+                "Content-Type":"application/json",
+                "Authorization":"Bearer " + token
+            }
+        }
+    );
+
+
+    if(response.status === 401){
+
+        sessionStorage.clear();
+        window.location.href="login.html";
+        return;
+
+    }
+
+
+    return await response.json();
+
+}
+
 /* ===== Data (saved in this browser with localStorage) ===== */
 function localStr(d) {
   const p = n => String(n).padStart(2, "0");
@@ -53,6 +85,21 @@ function load() {
   return d;
 }
 let data = load();
+
+async function loadAppointments(){
+
+    const appointments = await apiFetch("/appointments");
+
+    if(appointments){
+
+        data.appointments = appointments;
+
+        render();
+
+    }
+
+}
+
 const nextId = list => Math.max(0, ...list.map(x => x.id)) + 1;
 const staffOptions = () => ["No preference", ...data.staffs.map(s => s.name)];
 
@@ -273,5 +320,7 @@ if (page === "login") {
     window.location.href = "login.html";
 } else {
     start();
+
+    loadAppointments();
 }
 

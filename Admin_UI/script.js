@@ -189,7 +189,14 @@ function commit() { save(); render(); }
 
 /* ===== Button clicks ===== */
 function start() {
-  document.querySelector(".logout").onclick = () => sessionStorage.removeItem("admin");
+  document.querySelector(".logout").onclick = () => {
+
+    sessionStorage.removeItem("admin");
+    sessionStorage.removeItem("adminToken");
+
+    window.location.href = "login.html";
+
+};
 
   const add = document.getElementById("add-btn");
   if (add) add.onclick = () => ({ staffs: staffForm, clients: clientForm })[page]?.();

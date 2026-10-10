@@ -2,10 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 const Service = require("../Models/Service");
+const verifyAdmin = require("../Middleware/authMiddleware");
 console.log("SERVICE ROUTE LOADED");
 
 // GET ALL SERVICES
-router.get("/", async (req,res)=>{
+router.get("/", verifyAdmin, async (req,res)=>{
 
     try{
 
@@ -25,7 +26,7 @@ router.get("/", async (req,res)=>{
 
 
 // ADD SERVICE
-router.post("/", async(req,res)=>{
+router.post("/", verifyAdmin, async(req,res)=>{
 
     try{
 

@@ -7,7 +7,7 @@ const verifyAdmin = require("../Middleware/authMiddleware");
 
 // GET ALL BARBERS
 
-router.get("/", async(req,res)=>{
+router.get("/", verifyAdmin, async(req,res)=>{
 
     try{
 

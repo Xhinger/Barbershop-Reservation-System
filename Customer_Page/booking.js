@@ -1,16 +1,35 @@
 
-const serviceCatalog = {
+let serviceCatalog = {};
 
-    "Classic Haircut": { price: 150 },
-    "Fade": { price: 150 },
-    "Low Fade": { price: 150 },
-    "Mid Fade": { price: 150 },
-    "High Fade": { price: 150 },
-    "Burst Fade": { price: 150 },
-    "Mullet": { price: 150 },
-    "Semi-Kalbo": { price: 150 }
-};
+const serviceSelect = document.getElementById("service");
 
+fetch("http://localhost:5000/api/services")
+.then(res => res.json())
+.then(services => {
+
+    serviceSelect.innerHTML = 
+    `<option value="">Select a service</option>`;
+
+    services.forEach(service => {
+
+        serviceCatalog[service.name] = {
+            price: service.price
+        };
+
+        serviceSelect.innerHTML += `
+            <option value="${service.name}">
+                ${service.name} - ₱${service.price}
+            </option>
+        `;
+
+    });
+
+    updateReservationSummary();
+
+})
+.catch(error=>{
+    console.log("Service loading error:", error);
+});
 
 const barbers = [
     "Mia Jose Silva",
@@ -20,7 +39,6 @@ const barbers = [
 
 
 const form = document.getElementById("booking-form");
-const serviceSelect = document.getElementById("service");
 
 const dateInput = document.getElementById("date");
 const timeInput = document.getElementById("time");
@@ -68,7 +86,7 @@ function updateReservationSummary(){
     const details = serviceCatalog[selectedService];
 
 
-    if(!selectedService || !details){
+    if(!selectedService || !details){   
 
         summaryMessage.hidden = false;
         summaryDetails.hidden = true;
@@ -154,6 +172,8 @@ form.addEventListener("submit", function(event){
         service:
         serviceSelect.value,
 
+        price:
+        serviceDetails.price,
 
         barber:
         selectedBarber,

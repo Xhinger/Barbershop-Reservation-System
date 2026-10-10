@@ -28,7 +28,7 @@ message:error.message
 
 
 // GET APPOINTMENT BY ID
-router.get("/:id", async(req,res)=>{
+router.get("/:id", async(req,res)=>{    
     try {
         const appointment = await Appointment.findById(req.params.id);
 
@@ -107,7 +107,7 @@ message:error.message
 
 
 // UPDATE APPOINTMENT
-router.put("/:id", verifyAdmin, async (req, res) => {
+router.put("/:id", async (req, res) => {
     try {
         const appointment = await Appointment.findByIdAndUpdate(
             req.params.id,

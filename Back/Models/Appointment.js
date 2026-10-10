@@ -3,34 +3,45 @@ const mongoose = require("mongoose");
 
 const appointmentSchema = new mongoose.Schema({
 
-customerName:String,
-contactNumber:String,
-service:String,
-barber:String,
-date:String,
-time:String,
-message:String,
+    customerName:String,
 
-status:{
-    type:String,
-    default:"Pending"
-},
+    contactNumber:String,
 
-cancelledAt:{
-    type:Date,
-    default:null
-},
+    service:String,
 
-createdAt:{
-    type:String,
-    default:()=>{
+    price:{
+        type:Number,
+        default:0
+    },
 
-        return new Date().toLocaleString("en-PH",{
-            timeZone:"Asia/Manila"
-        });
+    barber:String,
 
+    date:String,
+
+    time:String,
+
+    message:String,
+
+    status:{
+        type:String,
+        default:"Pending"
+    },
+
+    cancelledAt:{
+        type:Date,
+        default:null
+    },
+
+    createdAt:{
+        type:String,
+        default:()=>{
+
+            return new Date().toLocaleString("en-PH",{
+                timeZone:"Asia/Manila"
+            });
+
+        }
     }
-}
 
 });
 

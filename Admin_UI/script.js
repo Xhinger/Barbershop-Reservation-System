@@ -185,12 +185,45 @@ function clientForm(c) {
 
 /* ===== Drawing the tables ===== */
 function apptRow(a) {
+
   const actions = {
-    Pending: [btn("accept", a.id, "Accept"), btn("decline", a.id, "Decline", "light")],
-    Confirmed: [btn("complete", a.id, "Mark done"), btn("cancel", a.id, "Cancel", "light")]
+    Pending: [
+      btn("accept", a._id || a.id, "Accept"),
+      btn("decline", a._id || a.id, "Decline", "light")
+    ],
+
+    Confirmed: [
+      btn("complete", a._id || a.id, "Mark done"),
+      btn("cancel", a._id || a.id, "Cancel", "light")
+    ]
+
   }[a.status] || [];
-  return `<tr><td>${when(a.date)}</td><td>${esc(a.client)}</td><td>${esc(a.service)}</td><td>${esc(a.staff)}</td>` +
-    `<td>${money(a.price)}</td><td><span class="tag ${a.status.toLowerCase()}">${a.status}</span></td><td>${actions.join(" ")}</td></tr>`;
+
+
+  return `
+  <tr>
+
+  <td>${when(a.date + "T" + a.time)}</td>
+
+  <td>${esc(a.customerName || a.client)}</td>
+
+  <td>${esc(a.service)}</td>
+
+  <td>${esc(a.barber || "No preference")}</td>
+
+  <td>${money(a.price || 0)}</td>
+
+  <td>
+    <span class="tag ${a.status.toLowerCase()}">
+      ${a.status}
+    </span>
+  </td>
+
+  <td>
+    ${actions.join(" ")}
+  </td>
+
+  </tr>`;
 }
 
 function earnings() {

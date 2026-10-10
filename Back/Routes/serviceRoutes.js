@@ -6,7 +6,7 @@ const verifyAdmin = require("../Middleware/authMiddleware");
 console.log("SERVICE ROUTE LOADED");
 
 // GET ALL SERVICES
-router.get("/", verifyAdmin, async (req,res)=>{
+router.get("/", async (req,res)=>{
 
     try{
 

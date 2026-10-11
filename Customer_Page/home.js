@@ -53,7 +53,7 @@ fetch("http://localhost:5000/api/services")
                     </p>
 
 
-                    <a href="booking.html?service=${service.name}">
+                    <a href="booking.html?service=${encodeURIComponent(service.name)}">
                     Book <span>Now</span>
                     </a>
 
@@ -75,5 +75,4 @@ fetch("http://localhost:5000/api/services")
     console.log("Error loading services:", error);
 
 });
-
 

@@ -1,5 +1,5 @@
-/* ===== Colors & fonts: change these first to redesign quickly ===== */
-:root {
+/* ===== Colors & fonts: change these first to redesign quickly ===== asdadasd */
+:root { 
   --sidebar: #101010;
   --sidebar-text: #d9e0e3;
   --page: linear-gradient(to top left, #a67c3b 9%, #101010 50%);
@@ -170,8 +170,60 @@ th {
 
 .table-wrap {
   width: 100%;
-  padding: none;
+  min-width: 0;
   overflow-x: auto;
+}
+
+body[data-page="appointments"] .table-wrap {
+  max-width: 100%;
+}
+
+body[data-page="appointments"] table {
+  min-width: 1040px;
+  table-layout: fixed;
+}
+
+body[data-page="appointments"] th:nth-child(1),
+body[data-page="appointments"] td:nth-child(1) {
+  width: 170px;
+}
+
+body[data-page="appointments"] th:nth-child(2),
+body[data-page="appointments"] td:nth-child(2) {
+  width: 150px;
+}
+
+body[data-page="appointments"] th:nth-child(3),
+body[data-page="appointments"] td:nth-child(3) {
+  width: 140px;
+}
+
+body[data-page="appointments"] th:nth-child(4),
+body[data-page="appointments"] td:nth-child(4) {
+  width: 170px;
+}
+
+body[data-page="appointments"] th:nth-child(5),
+body[data-page="appointments"] td:nth-child(5) {
+  width: 90px;
+}
+
+body[data-page="appointments"] th:nth-child(6),
+body[data-page="appointments"] td:nth-child(6) {
+  width: 120px;
+}
+
+body[data-page="appointments"] th:nth-child(7),
+body[data-page="appointments"] td:nth-child(7) {
+  width: 200px;
+}
+
+body[data-page="appointments"] tbody td:last-child {
+  white-space: nowrap;
+}
+
+body[data-page="appointments"] tbody td:last-child button {
+  margin: 2px;
 }
 
 /* ===== Status labels & buttons ===== */
@@ -245,21 +297,202 @@ button.light {
   }
   .sidebar {
     width: 100%;
+    flex: 0 0 auto;
     flex-direction: row;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 4px;
-    padding: 12px;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 0;
+  }
+  .sidebar .logo {
+    display: block;
+    width: 100%;
+    max-width: 120px;
+    max-height: 52px;
+    margin: 0 auto 4px;
+    object-fit: contain;
+  }
+  .sidebar br {
+    display: none;
+  }
+  .sidebar a,
+  .sidebar .logout {
+    flex: 1 1 calc(50% - 6px);
+    min-height: 44px;
+    margin: 0;
+    font-size: 14px;
+  }
+  .sidebar a:hover,
+  .sidebar a.active {
+    transform: none;
   }
   .sidebar h1 {
     width: 100%;
     margin: 0 0 8px;
   }
+  .main {
+    min-width: 0;
+    padding: 18px 12px;
+  }
+  .main h1,
+  .main h2,
+  .toolbar h1,
+  .toolbar h2 {
+    font-size: 22px;
+    overflow-wrap: anywhere;
+  }
+  .toolbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .toolbar button {
+    width: 100%;
+    min-height: 42px;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  .stat {
+    min-width: 0;
+  }
+  .stat strong {
+    overflow-wrap: anywhere;
+    font-size: 25px;
+  }
+  .table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  th,
+  td {
+    padding: 10px 8px;
+  }
+  .modal {
+    padding: 10px;
+  }
+  .modal-box {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .dialog-buttons {
+    flex-direction: column-reverse;
+  }
+  .dialog-buttons button {
+    width: 100%;
+    min-height: 42px;
+  }
+}
+
+/* Tablets; the base styles remain in use at laptop widths. */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    flex: 0 0 auto;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 0;
+  }
+  .sidebar .logo {
+    width: auto;
+    max-width: 140px;
+    max-height: 58px;
+    margin: 0 8px 4px 0;
+    object-fit: contain;
+  }
+  .sidebar br {
+    display: none;
+  }
+  .sidebar a,
   .sidebar .logout {
-    margin-top: 0;
-    margin-left: auto;
+    flex: 1 1 150px;
+    min-height: 46px;
+    margin: 0;
+  }
+  .sidebar a:hover,
+  .sidebar a.active {
+    transform: none;
   }
   .main {
-    padding: 20px 16px;
+    min-width: 0;
+    padding: 24px;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .stat {
+    min-width: 0;
+  }
+  .table-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+/* TV and extra-wide displays */
+@media (min-width: 1920px) {
+  .sidebar {
+    width: 300px;
+    flex: 0 0 300px;
+    padding: 36px 24px;
+  }
+  .sidebar .logo {
+    width: 100%;
+    max-width: 240px;
+    max-height: 140px;
+    object-fit: contain;
+  }
+  .sidebar a,
+  .sidebar .logout {
+    min-height: 56px;
+    font-size: 20px;
+  }
+  .sidebar a img,
+  .sidebar .logout img {
+    width: 26px;
+    height: 26px;
+    margin-right: 12px;
+  }
+  .main {
+    padding: clamp(48px, 4vw, 88px);
+  }
+  .main h1,
+  .main h2,
+  .toolbar h1,
+  .toolbar h2 {
+    font-size: clamp(34px, 2vw, 48px);
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+  .stat {
+    padding: 28px;
+  }
+  .stat p {
+    font-size: 20px;
+  }
+  .stat strong {
+    font-size: 38px;
+  }
+  th,
+  td {
+    padding: 18px;
+    font-size: 19px;
+  }
+  th {
+    font-size: 17px;
   }
 }
 

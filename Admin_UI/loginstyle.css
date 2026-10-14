@@ -308,6 +308,58 @@ input {
   }
 }
 
+@media (min-width: 761px) and (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+
+  .card {
+    width: min(900px, 100%);
+    height: min(560px, 80vh);
+  }
+
+  .panel {
+    padding: 28px;
+  }
+
+  .overlay-panel {
+    padding: 28px;
+  }
+
+  .overlay h2 {
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .card {
+    width: min(1200px, 90vw);
+    height: min(760px, 78vh);
+  }
+
+  .panel {
+    padding: 56px 64px;
+  }
+
+  .panel h1 {
+    font-size: 38px;
+  }
+
+  .panel label,
+  .panel input,
+  .panel button {
+    font-size: 18px;
+  }
+
+  .overlay-panel {
+    padding: 64px;
+  }
+
+  .overlay h2 {
+    font-size: 34px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .panel,
   .overlay-wrap,
